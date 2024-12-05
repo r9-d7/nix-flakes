@@ -9,7 +9,7 @@
   system.stateVersion = "24.11"; 
   imports =
     [
-      ../../hardware-configuration.nix
+      ./hardware-configuration.nix
       ./nvidia-config.nix
       ../../modules/nixos/main-user.nix
       ../../modules/nixos/resources/packages.nix
@@ -24,7 +24,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixvault"; # Define your hostname.
+  networking.hostName = "nixvault1"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   
   nixpkgs.config.allowUnfree = true;
