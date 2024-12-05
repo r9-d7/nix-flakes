@@ -99,7 +99,7 @@
   },
 
   "custom/brightness": {
-      "exec": "~/.userscripts/brightct.sh",
+      "exec": "~/.config/userscripts/brightct.sh",
       "format": "󰃠   {}%",
       "return-type": "",
       "interval": 60,

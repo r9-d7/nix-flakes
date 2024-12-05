@@ -35,9 +35,9 @@
   xdg.configFile."wofi/style.css".source = ../../dotfiles/wofi/.config/wofi/style.css;
 
   # user scripts
-  xdg.dataFile.".userscripts/brightct.sh".source = ../../dotfiles/scripts/.userscripts/brightct.sh;
-  xdg.dataFile.".userscripts/chbright.sh".source = ../../dotfiles/scripts/.userscripts/chbright.sh;
-  xdg.dataFile.".userscripts/mountonedrive.sh".source = ../../dotfiles/scripts/.userscripts/mountonedrive.sh;
+  xdg.configFile."userscripts/brightct.sh".source = ../../dotfiles/scripts/.config/userscripts/brightct.sh;
+  xdg.configFile."userscripts/chbright.sh".source = ../../dotfiles/scripts/.config/userscripts/chbright.sh;
+  xdg.configFile."userscripts/mountonedrive.sh".source = ../../dotfiles/scripts/.config/userscripts/mountonedrive.sh;
 
 
 

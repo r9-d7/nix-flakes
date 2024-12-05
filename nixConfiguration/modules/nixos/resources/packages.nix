@@ -25,6 +25,7 @@
     nitch
     papirus-icon-theme
     bibata-cursors
+    ddcutil
   ];
 
   # Programs
