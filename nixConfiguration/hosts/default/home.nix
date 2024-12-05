@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
   home.username = "rossf";
   home.homeDirectory = "/home/rossf";
@@ -11,28 +11,18 @@
     cava
   ];
 
-  xdg.configFile."hypr/*".source = ../../modules/dotfiles/hyprland/.config/hypr/*;
-  xdg.configFile."hypr/*".source = ../../modules/dotfiles/hypridle/.config/hypr/*;
-  xdg.configFile."hypr/*".source = ../../modules/dotfiles/hyprlock/.config/hypr/*;
-  xdg.configFile."hypr/*".source = ../../modules/dotfiles/hyprpaper/.config/hypr/*;
-  xdg.configFile."kitty/*".source = ../../modules/dotfiles/kitty/.config/kitty/*;
-  xdg.dataFile.".userscripts/*".source = ../../modules/dotfiles/scripts/.userscripts/*;
-  xdg.configFile."starship.toml".source = ../../modules/dotfiles/starship/.config/starship.toml;
-  xdg.configFile."waybar/*".source = ../../modules/dotfiles/waybar/.config/waybar/*;
-  xdg.configFile."wofi/*".source = ../../modules/dotfiles/wofi/.config/wofi/*;
-
   imports = [
     ../../modules/home-manager
-    inputs.catppuccin.HomeManagerModules.catppuccin
+    #inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
   # Mako Configuration
-  iconTheme = rec {
-    name = "Papirus-Dark";
-    package = pkgs.papirus-icon-theme;
-    iconPath = "${package}/share/icons/${name}";
-  }
-  services.mako = {
+  services.mako = 
+  let
+      package = pkgs.papirus-icon-theme;
+      pathToIcons = "${package}/share/icons/Papirus-Dark";
+  in 
+  {
     enable = true;
     anchor = "top-center";
     borderRadius = 8;
@@ -41,7 +31,7 @@
     catppuccin.enable = true;
     catppuccin.flavor = "mocha";
     catppuccin.accent = "mauve";
-    iconPath = "${iconTheme.iconPath}";
+    iconPath = "${pathToIcons}";
     maxVisible = 3;
     borderSize = 2;
     actions = true;

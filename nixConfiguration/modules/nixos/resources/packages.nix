@@ -44,7 +44,7 @@
 
   # Font Packages
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
+    nerd-fonts.caskaydia-cove
   ];
   
 }
