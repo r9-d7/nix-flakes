@@ -22,7 +22,7 @@
   xdg.configFile."wofi/*".source = ../../modules/dotfiles/wofi/.config/wofi/*;
 
   imports = [
-    ../../modules/home-manager/homeconf
+    ../../modules/home-manager
     inputs.catppuccin.HomeManagerModules.catppuccin
   ];
 

@@ -18,7 +18,7 @@
 
   # user account
   main-user.enable = true;
-  main-user.userName = rossf;
+  main-user.userName = "rossf";
   
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
