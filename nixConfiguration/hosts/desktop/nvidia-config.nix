@@ -11,7 +11,7 @@
   #in 
 {
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = [ nvidia-offload ];
+#  environment.systemPackages = [ nvidia-offload ];
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.graphics.enable = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
