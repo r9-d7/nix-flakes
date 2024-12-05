@@ -24,7 +24,7 @@
     nixosConfigurations.nixvault = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ${defaulthost}/configuration.nix
+        ./hosts/default/configuration.nix
         catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
         {
@@ -32,7 +32,7 @@
             extraSpecialArgs = { inherit inputs; };
             users.rossf = {
               imports = [
-                ${defaulthost}/home.nix
+                ./hosts/default/home.nix
                 catppuccin.homeManagerModules.catppuccin
               ];
             };
