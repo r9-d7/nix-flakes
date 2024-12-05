@@ -1,0 +1,195 @@
+{
+  "position": "top",
+  "modules-left": [
+	  "hyprland/workspaces", 
+	  "hyprland/window"
+  ],
+  
+  //"modules-center": [],
+  
+  "modules-right": [
+	  "tray",
+	  "pulseaudio", 
+	  "backlight", 
+	  "battery",
+	  "group/hardware",
+	  "group/group-power",
+	  "clock"
+  ],
+
+  "clock": {
+    "format": "   {:%I:%M %p       %m/%d/%Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
+    },
+    "timeout": 60,
+    "max-length": 10
+  },
+  
+  
+  "network": {
+    "format-wifi": "    {bandwidthUpBits}    {bandwidthDownBits}  " ,
+    "format-ethernet": "<span size='13000' foreground='#a6e3a1'>󰤭  </span> Disconnected",
+    "format-linked": "{ifname} (No IP)  ",
+    "format-disconnected": "<span size='13000' foreground='#cdd6f4'>  </span>Disconnected",
+    "tooltip-format-wifi": "SSID: {essid}  |  Signal Strength: {signalStrength}%  |  IP: {ipaddr}"
+    //"on-click": "nm-applet"
+  },
+  
+
+
+  "pulseaudio": {
+      "format": "{icon}   {volume}%",
+      "format-muted": " ",
+      "format-icons": {
+          "default": ["", " ", " "]
+      },
+      "on-click": "pavucontrol"
+  },
+  "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": "  {status}",
+	"format-disabled": "󰂲  {status}", // an empty format will hide the module
+	"format-connected": "󰂱  {num_connections} connected",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
+  },
+  "tray": {
+        "icon-size": 18,
+        "spacing": 10
+  },
+  "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-size": {},
+      "icon-theme": "${i_theme}",
+      "spacing": 0,
+      "tooltip-format": "{title}",
+      "on-click": "activate",
+      "on-click-middle": "close",
+      "on-click-right": "fullscreen"
+  },
+
+  "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+	"good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+
+    "format": "{icon}   {capacity}%",
+    "format-plugged": "󱐥  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 10,
+    "min-length": 8
+  },
+
+  "cpu": {
+      "interval": 15,
+      "format": "   {}%",
+      "max-length": 10,
+      "min-length": 8
+  },
+  "memory": {
+      "interval": 30,
+      "format": "   {}%",
+      "max-length": 10,
+      "min-length": 8
+  },
+
+  "custom/gpu": {
+      "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+      "format": "<span size='13000' foreground='#a6e3a1'>󰢮 </span>{}%",
+      "return-type": "",
+      "interval": 15,
+      "max-length": 10,
+      "min-length": 8
+  },
+
+  "custom/brightness": {
+      "exec": "~/.userscripts/brightct.sh",
+      "format": "󰃠   {}%",
+      "return-type": "",
+      "interval": 60,
+      "max-length": 10
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "]
+  },
+
+  "custom/hardwareinfo": {
+	  "format": "<span size='13000' foreground='#f9e2af'> 󰓅 </span>"
+  },
+
+  "group/hardware": {
+	  "orientation": "horizontal",
+	  "drawer": {
+		  "transition-duration":500,
+		  "children-class": "not-hardwareinfo",
+		  "transition-left-to-right": false,
+	  },
+	  "modules": [
+		  "custom/hardwareinfo",
+		  "network",
+		  "cpu",
+		  "custom/gpu",
+		  "memory",
+	  ]
+  },
+
+  "group/group-power": {
+    "orientation": "inherit",
+    "drawer": {
+        "transition-duration": 500,
+        "children-class": "not-power",
+        "transition-left-to-right": false,
+    },
+    "modules": [
+        "custom/power", // First element is the "group leader" and won't ever be hidden
+        "custom/quit",
+        "custom/lock",
+        "custom/reboot",
+    ]
+  },
+
+  "custom/quit": {
+    "format": "<span size='13000' foreground='#fab387'> 󰗼 </span> ",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit"
+  },
+
+  "custom/lock": {
+    "format": " <span size='13000' foreground='#fab387'> 󰍁 </span> ",
+    "tooltip": false,
+    "on-click": "hyprlock"
+  },
+
+  "custom/reboot": {
+    "format": " <span size='13000' foreground='#fab387'> 󰜉 </span> ",
+    "tooltip": false,
+    "on-click": "reboot"
+
+  },
+
+  "custom/power": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "shutdown now"
+
+  }
+  
+
+}
