@@ -18,12 +18,13 @@
   let
       system = "x86_64-linux";
       pgks = import nixpkgs.legacyPackages.${system};
+      defaulthost = "./hosts/default";
   in 
   {
     nixosConfigurations.nixvault = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./hosts/default/configuration.nix
+        ${defaulthost}/configuration.nix
         catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.home-manager
         {
@@ -31,7 +32,7 @@
             extraSpecialArgs = { inherit inputs; };
             users.rossf = {
               imports = [
-                ./hosts/default/home.nix
+                ${defaulthost}/home.nix
                 catppuccin.homeManagerModules.catppuccin
               ];
             };

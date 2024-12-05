@@ -16,6 +16,8 @@
     #inputs.catppuccin.homeManagerModules.catppuccin
   ];
 
+  programs.home-manager.enable = true;
+
   # Mako Configuration
   services.mako = 
   let
@@ -119,7 +121,8 @@
       ${builtins.readFile ../../modules/home-manager/nvim/options.lua}
       ${builtins.readFile ../../modules/home-manager/nvim/plugin/other.lua}
     '';
-
+    
+    programs.home-manager.enable = true;
   };
 }
 
