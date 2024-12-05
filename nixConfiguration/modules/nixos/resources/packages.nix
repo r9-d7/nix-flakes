@@ -5,10 +5,8 @@
   # Nix Packages
   environment.systemPackages = with pkgs; [
     vim
-    home-manager
     wget
     kitty
-    nautilus
     hyprpaper
     hypridle
     hyprshot
@@ -33,6 +31,7 @@
   programs = {
     steam.enable = true;
     firefox.enable = true;
+    thunar.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
