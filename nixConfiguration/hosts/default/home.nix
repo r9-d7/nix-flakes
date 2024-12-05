@@ -121,8 +121,6 @@
       ${builtins.readFile ../../modules/home-manager/nvim/options.lua}
       ${builtins.readFile ../../modules/home-manager/nvim/plugin/other.lua}
     '';
-    
-    programs.home-manager.enable = true;
   };
 }
 

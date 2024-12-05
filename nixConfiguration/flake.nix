@@ -21,24 +21,30 @@
       defaulthost = "./hosts/default";
   in 
   {
-    nixosConfigurations.nixvault = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/default/configuration.nix
-        catppuccin.nixosModules.catppuccin
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            extraSpecialArgs = { inherit inputs; };
-            users.rossf = {
-              imports = [
-                ./hosts/default/home.nix
-                catppuccin.homeManagerModules.catppuccin
-              ];
+    nixosConfigurations = {
+      nixvault = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/default/configuration.nix
+          catppuccin.nixosModules.catppuccin
+          
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+
+              extraSpecialArgs = { inherit inputs; };
+              users.rossf = {
+                imports = [
+                  ./hosts/default/home.nix
+                  catppuccin.homeManagerModules.catppuccin
+                ];
+              };
             };
-          };
-        }
-      ];
+          }
+        ];
+      };
     };
   };
 }
