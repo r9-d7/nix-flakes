@@ -10,8 +10,7 @@
   "modules-right": [
 	  "tray",
 	  "pulseaudio", 
-	  "backlight", 
-	  "battery",
+	  "custom/brightness",
 	  "group/hardware",
 	  "group/group-power",
 	  "clock"
@@ -75,23 +74,6 @@
       "on-click": "activate",
       "on-click-middle": "close",
       "on-click-right": "fullscreen"
-  },
-
-  "battery": {
-    "bat": "BAT1",
-    "interval": 60,
-    "states": {
-	"good": 95,
-        "warning": 30,
-        "critical": 15
-    },
-
-    "format": "{icon}   {capacity}%",
-    "format-plugged": "󱐥  {capacity}%",
-    "format-charging": "󰂄  {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "max-length": 10,
-    "min-length": 8
   },
 
   "cpu": {

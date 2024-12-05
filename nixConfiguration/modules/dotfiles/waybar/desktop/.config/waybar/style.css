@@ -113,9 +113,9 @@ window#waybar.hidden {
 	
    	border-radius: 8px;
 	transition: none;
-	color: @lavender; /*#1A1826;*/
+	color: @sapphire; /*#1A1826;*/
 	background: rgba(49,50,68,0.5);
-        border: 2px solid @lavender;
+        border: 2px solid @sapphire;
 }
 
 #bluetooth {
@@ -202,9 +202,9 @@ window#waybar.hidden {
 	
         border-radius: 8px;
 	transition: none;
-	color: @subtext1; /*#B5E8E0;*/
+	color: @lavender; /*#B5E8E0;*/
 	background: rgba(49,50,68,0.5); 
-        border: 2px solid @subtext1; /*#ABE9B3;*/
+        border: 2px solid @lavender; /*#ABE9B3;*/
 }
 
 #idle_inhibitor {
@@ -290,9 +290,9 @@ window#waybar.hidden {
 	
         border-radius: 8px;
 	transition: none;
-	color: @maroon; /*#B5E8E0;*/
+	color: @teal; /*#B5E8E0;*/
 	background: rgba(49,50,68,0.5); 
-        border: 2px solid @maroon; /*#ABE9B3;*/
+        border: 2px solid @teal; /*#ABE9B3;*/
         min-width: 55px;
 }
 
