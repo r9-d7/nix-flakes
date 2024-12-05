@@ -9,9 +9,9 @@
   system.stateVersion = "24.11"; 
   imports =
     [
-      ./hardware-configuration.nix
+      ../../hardware-configuration.nix
+      ./nvidia-config.nix
       ../../modules/nixos/main-user.nix
-      ../../modules/nixos/resources/nvidia-config.nix
       ../../modules/nixos/resources/packages.nix
       inputs.home-manager.nixosModules.default
     ];
