@@ -112,7 +112,7 @@
   },
 
   "custom/hardwareinfo": {
-	  "format": "<span size='13000' foreground='#f9e2af'> 󰓅 </span>"
+	  "format": "<span size='13000' foreground='#89dceb'> 󰓅 </span>"
   },
 
   "group/hardware": {

@@ -156,7 +156,6 @@ window#waybar.hidden {
 #clock {
 	margin-top: 16px;
 	margin-left: 16px;
-	margin-right: 16px;
 	margin-bottom: 0px;
     
         padding-left: 10px;
@@ -357,6 +356,7 @@ window#waybar.hidden {
 #group-power {
         margin-top: 16px;
 	margin-left: 16px;
+	margin-right:16px;
         border-radius: 8px;
 	transition: none;
 	background: rgba(49,50,68,0.5); 
