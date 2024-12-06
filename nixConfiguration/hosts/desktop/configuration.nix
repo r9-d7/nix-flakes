@@ -24,7 +24,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixvault1"; # Define your hostname.
+  networking.hostName = "nixvault-101"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   
   nixpkgs.config.allowUnfree = true;
