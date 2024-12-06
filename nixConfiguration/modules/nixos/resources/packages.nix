@@ -27,6 +27,7 @@
     bibata-cursors
     ddcutil
     nwg-displays
+    prismlauncher
   ];
 
   # Programs

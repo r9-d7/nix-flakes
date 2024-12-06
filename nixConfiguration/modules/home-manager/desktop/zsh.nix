@@ -10,7 +10,7 @@
       ll = "ls -al";
       vim = "nvim";
       vi = "nvim";
-      rebuild = "sudo nixos-rebuild switch --flake ~/nix-flakes/nixConfiguration/";
+      rebuild = "cd ~/nix-flakes/nixConfiguration && sudo nixos-rebuild switch --flake .";
       neofetch = "fastfetch";
       nf = "fastfetch";
       nixupdate = "sudo nix-channel --update";
