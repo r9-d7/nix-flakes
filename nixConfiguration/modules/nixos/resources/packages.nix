@@ -26,6 +26,7 @@
     papirus-icon-theme
     bibata-cursors
     ddcutil
+    nwg-displays
   ];
 
   # Programs
