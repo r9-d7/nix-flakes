@@ -11,7 +11,7 @@
   xdg.configFile."hypr/hypridle.conf".source = ../../dotfiles/hypridle/.config/hypr/hypridle.conf;
 
   # hyprlock
-  xdg.configFile."hypr/hyprlock.conf".source = ../../dotfiles/hyprlock/.config/hypr/hyprlock.conf;
+  xdg.configFile."hypr/hyprlock.conf".source = ../../dotfiles/hyprlock/laptop/.config/hypr/hyprlock.conf;
   xdg.configFile."hypr/profilePics/photos/Shuttle.png".source = ../../dotfiles/hyprlock/.config/hypr/profilePics/photos/Shuttle.png;
   xdg.configFile."hypr/wallpapers/galaxy.jpeg".source = ../../dotfiles/hyprpaper/.config/hypr/wallpapers/galaxy.jpeg;
 
