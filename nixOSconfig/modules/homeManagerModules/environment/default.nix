@@ -1,7 +1,7 @@
 { config, pkgs, lib, ...}:
 {
   imports = [ 
-    ./dotfiles.nix
+    ./dotfiles
     ./gtk.nix
     ./mako.nix
   ];

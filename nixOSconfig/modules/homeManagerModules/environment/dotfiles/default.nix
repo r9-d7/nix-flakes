@@ -1,31 +1,10 @@
 { config, pkgs, lib, ... }:
-let
-  cfgDesktop = config.hypr-desktop;
-  cfgLaptop = config.hypr-laptop;
-in
 {
-
-  options = {
-    hypr-desktop.enable = lib.mkEnableOption "enables desktop hyprland configuration";
-    hypr-laptop.enable = lib.mkEnableOption "enables laptop hyprland configuration";
-  };
-
-  config = lib.mkIf cfgDesktop.enable {
-    # Desktop specific config
-    xdg.configFile."hypr/monitors.conf".source = ./../../../dotfiles/hyprland/.config/hypr/desktop_monitors.conf;
-    xdg.configFile."hypr/hyprlock.conf".source = ./../../../dotfiles/hyprlock/.config/hypr/desktop_hyprlock.conf;
-    xdg.configFile."waybar/config.jsonc".source = ./../../../dotfiles/waybar/.config/waybar/desktop_config.jsonc;
-    xdg.configFile."waybar/style.css".source = ./../../../dotfiles/waybar/.config/waybar/desktop_style.css;
-  };
   
-  config = lib.mkIf cfgLaptop.enable {
-    # Laptop specific config
-    xdg.configFile."hypr/monitors.conf".source = ./../../../dotfiles/hyprland/.config/hypr/laptop_monitors.conf;
-    xdg.configFile."hypr/hyprlock.conf".source = ./../../../dotfiles/hyprlock/.config/hypr/laptop_hyprlock.conf;
-    xdg.configFile."waybar/config.jsonc".source = ./../../../dotfiles/waybar/.config/waybar/laptop_config.jsonc;
-    xdg.configFile."waybar/style.css".source = ./../../../dotfiles/waybar/.config/waybar/laptop_style.css;
-  };
-
+  imports = [
+    ./hypr-desktop.nix
+    ./hypr-laptop.nix
+  ];
   
   # hyprland config
   xdg.configFile."hypr/hyprland.conf".source = ./../../../dotfiles/hyprland/.config/hypr/hyprland.conf;
