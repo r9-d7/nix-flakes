@@ -45,30 +45,6 @@
       ];
     };
 
-    nixosConfigurations.nixvault1 = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/desktop/configuration.nix
-        catppuccin.nixosModules.catppuccin
-          
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-
-            extraSpecialArgs = { inherit inputs; };
-            users.rossf = {
-              imports = [
-                ./hosts/desktop/home.nix
-                catppuccin.homeManagerModules.catppuccin
-              ];
-            };
-          };
-        }
-      ];
-    };
-
     nixosConfigurations.nixvault-101 = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
