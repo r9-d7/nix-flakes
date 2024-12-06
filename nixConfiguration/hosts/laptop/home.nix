@@ -36,7 +36,7 @@
       accent = "mauve";
       size = "standard";
       tweaks = [ "normal" ];
-    }
+    };
   };
 
   # Mako Configuration
