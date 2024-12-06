@@ -10,8 +10,6 @@
   xdg.configFile."hypr/hyprland.conf".source = ./../../../dotfiles/hyprland/.config/hypr/hyprland.conf;
   xdg.configFile."hypr/mocha.conf".source = ./../../../dotfiles/hyprland/.config/hypr/mocha.conf;
   xdg.configFile."hypr/workspaces.conf".source = ./../../../dotfiles/hyprland/.config/hypr/workspaces.conf;
-  xdg.configFile."hypr/gamemode.sh".source = ./../../../dotfiles/hyprland/.config/hypr/gamemode.sh;
-
 
   # hypridle
   xdg.configFile."hypr/hypridle.conf".source = ./../../../dotfiles/hypridle/.config/hypr/hypridle.conf;
