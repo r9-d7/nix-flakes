@@ -6,7 +6,6 @@
   home.stateVersion = "24.11";
   home.packages = with pkgs; [
     git
-    nitch
     cmatrix
     starship
     cava
