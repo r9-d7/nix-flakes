@@ -274,7 +274,7 @@ window#waybar.hidden {
         border-radius: 8px;
 	transition: none;
 	color: @sky; /*#B5E8E0;*/
-	background: rgba(49,50,68,0.5); 
+	background: rgba(0,0,0,0); 
 }
 
 #custom-brightness {
