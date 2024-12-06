@@ -16,7 +16,7 @@ in
     xdg.configFile."hypr/hyprlock.conf".source = ./../../../dotfiles/hyprlock/.config/hypr/desktop_hyprlock.conf;
     xdg.configFile."waybar/config.jsonc".source = ./../../../dotfiles/waybar/.config/waybar/desktop_config.jsonc;
     xdg.configFile."waybar/style.css".source = ./../../../dotfiles/waybar/.config/waybar/desktop_style.css;
-  }
+  };
   
   config = lib.mkIf cfgLaptop.enable {
     # Laptop specific config
@@ -24,7 +24,7 @@ in
     xdg.configFile."hypr/hyprlock.conf".source = ./../../../dotfiles/hyprlock/.config/hypr/laptop_hyprlock.conf;
     xdg.configFile."waybar/config.jsonc".source = ./../../../dotfiles/waybar/.config/waybar/laptop_config.jsonc;
     xdg.configFile."waybar/style.css".source = ./../../../dotfiles/waybar/.config/waybar/laptop_style.css;
-  }
+  };
 
   
   # hyprland config
