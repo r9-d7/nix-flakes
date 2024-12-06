@@ -9,6 +9,7 @@
     git
     starship
     cava
+    eza
   ];
 
   imports = [
@@ -110,6 +111,11 @@
         config = toLuaFile ../../modules/home-manager/nvim/plugin/telescope.lua;
       }
 
+      {
+        plugin = oil-nvim;
+        config = toLua "require(\"oil\").setup()";
+      }
+
       telescope-fzf-native-nvim
       cmp_luasnip
       cmp-nvim-lsp
@@ -117,6 +123,7 @@
       friendly-snippets
       lualine-nvim
       nvim-web-devicons
+
   
       {
         plugin = (nvim-treesitter.withPlugins (p: [
@@ -132,6 +139,8 @@
 
       vim-nix
       transparent-nvim
+      neo-tree-nvim
+      
 
       #{
       #   plugin = nixpkgs.vimPlugins.own-onedark-nvim;

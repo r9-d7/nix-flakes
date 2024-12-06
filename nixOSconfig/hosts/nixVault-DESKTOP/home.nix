@@ -16,6 +16,7 @@
     spotify
     prismlauncher
     rclone
+    eza
   ];
 
   imports = [

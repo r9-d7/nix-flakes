@@ -7,7 +7,10 @@
     autosuggestion.enable = true;
 
     shellAliases = {
-      ll = "ls -al";
+      l = "eza --icons=always";
+      ls = "eza -a --icons=always";
+      ll = "eza -al --icons=always";
+      lt = "eza -a --tree --level=3 --icons=always";
       vim = "nvim";
       vi = "nvim";
       rebuild = "cd ~/nix-flakes/nixOSconfig && sudo nixos-rebuild switch --flake .";

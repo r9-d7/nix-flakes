@@ -46,6 +46,11 @@
         config = toLuaFile ./nvim/plugin/telescope.lua;
       }
 
+      {
+        plugin = oil-nvim;
+        config = toLua "require(\"oil\").setup()";
+      }
+
       telescope-fzf-native-nvim
       cmp_luasnip
       cmp-nvim-lsp
@@ -68,6 +73,7 @@
 
       vim-nix
       transparent-nvim
+      neo-tree-nvim
       
     ];
 
