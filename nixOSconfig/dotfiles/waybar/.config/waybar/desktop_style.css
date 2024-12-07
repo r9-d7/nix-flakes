@@ -7,11 +7,6 @@
 	font-size: 14px;
 	min-height: 8px;
     font-weight: bold;
-
-	margin-top:12px;
-	margin-left: 12px;
-	margin-right: 12px;
-	margin-bottom: 0px;
 }
 
 window#waybar {
@@ -40,7 +35,7 @@ window#waybar.hidden {
 
 #workspaces {
 	/*margin-top: 16px;*/
-	margin-left: 16px;
+	/*margin-left: 16px;*/
     margin-right: 16px;
 	/*margin-bottom: 0px;*/
 
@@ -184,7 +179,7 @@ window#waybar.hidden {
 	padding-right: 4px;
     border-radius: 0px;
 	transition: none;
-	color: @lavender;
+	color: @yellow;
 	background: transparent;
 }
 
@@ -193,7 +188,7 @@ window#waybar.hidden {
 	padding-right: 2px;
     border-radius: 0px;
 	transition: none;
-	color: @lavender;
+	color: @yellow;
 	background: transparent;
 }
 
@@ -204,7 +199,7 @@ window#waybar.hidden {
 	padding-right: 0px;
     border-radius: 0px;
 	transition: none;
-	color: @lavender;
+	color: @yellow;
 	background: transparent;
 }
 

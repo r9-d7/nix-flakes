@@ -21,6 +21,7 @@
   # hyprpaper
   xdg.configFile."hypr/wallpapers/winterforest.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/winterforest.jpeg;
   xdg.configFile."hypr/hyprpaper.conf".source = ./../../../../dotfiles/hyprpaper/.config/hypr/hyprpaper.conf;
+  xdg.configFile."hypr/wallpapers/foggybridge.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/foggybridge.png;
 
   #kitty
   xdg.configFile."kitty/kitty.conf".source = ./../../../../dotfiles/kitty/.config/kitty/kitty.conf;

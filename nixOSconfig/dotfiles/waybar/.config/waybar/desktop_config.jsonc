@@ -1,5 +1,9 @@
 {
   "position": "top",
+  "margin-left": 12,
+  "margin-right": 12,
+  "margin-top": 12,
+
   "modules-left": [
 	  "hyprland/workspaces", 
 	  "hyprland/window"
