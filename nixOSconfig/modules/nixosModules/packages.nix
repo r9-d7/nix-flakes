@@ -21,6 +21,7 @@
     fastfetch
     nitch
     feh
+    bibata-cursors
   ];
 
   # Programs
