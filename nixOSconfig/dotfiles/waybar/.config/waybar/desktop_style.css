@@ -167,7 +167,7 @@ window#waybar.hidden {
 	transition: none;
 	color: @mauve;
 	background: rgba(49,50,68,0.75); 
-    border: 2px solid transparent @mauve*/;
+    border: 2px solid transparent /*@mauve*/;
     min-width: 55px;
 }
 
