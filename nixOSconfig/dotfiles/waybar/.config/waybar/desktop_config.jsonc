@@ -8,14 +8,15 @@
   //"modules-center": [],
   
   "modules-right": [
-	  "tray",
-    "group/hardware",
-	  "pulseaudio",
+	"tray", 
+	"idle_inhibitor",
+	"pulseaudio",
+	"network",
     "clock",
-	  "group/group-power"
+	"group/hardware",
+	"group/group-power"
   ],
 
-  
   "pulseaudio": {
       "format": "{icon}   {volume}%",
       "format-muted": " ",
@@ -38,8 +39,8 @@
   */
 
   "tray": {
-        "icon-size": 18,
-        "spacing": 10
+      "icon-size": 18,
+      "spacing": 10
   },
   
   // hardware group
@@ -52,19 +53,28 @@
 	  },
 	  "modules": [
 		  "custom/hardwareinfo",
-		  "network",
 		  "cpu",
 		  "custom/gpu",
 		  "memory"
 	  ]
   },
 
+  "idle_inhibitor": {
+	  "format": "{icon}",
+	  "format-icons": {
+		  "activated": " ",
+        "deactivated": " "
+	  },
+	  "timeout": 60,
+	  "max-length": 10
+  },
+
   "network": {
-    "format-wifi": "    {bandwidthUpBits}    {bandwidthDownBits}  " ,
-    "format-ethernet": "<span size='13000' foreground='#a6e3a1'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP)  ",
-    "format-disconnected": "<span size='13000' foreground='#cdd6f4'>  </span>Disconnected",
-    "tooltip-format-wifi": "SSID: {essid}  |  Signal Strength: {signalStrength}%  |  IP: {ipaddr}"
+      "format-wifi": "   {bandwidthUpBits}      {bandwidthDownBits} " ,
+      "format-ethernet": "󰤭   Disconnected",
+      "format-linked": "{ifname} (No IP)  ",
+      "format-disconnected": "   Disconnected",
+      "tooltip-format-wifi": "SSID: {essid}  |  Signal Strength: {signalStrength}%  |  IP: {ipaddr}"
   },
 
   "cpu": {
@@ -82,23 +92,15 @@
 
   "custom/gpu": {
       "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-      "format": "<span size='13000' foreground='#a6e3a1'>󰢮 </span>{}%",
+      "format": "<span size='13000' foreground='#f9e2af'>󰢮 </span>{}%",
       "return-type": "",
       "interval": 15,
       "max-length": 10,
       "min-length": 8
   },
 
-  /*
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{percent}% {icon}",
-    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "]
-  },
-  */
-
   "custom/hardwareinfo": {
-	  "format": "<span size='13000' foreground='#89dceb'> 󰓅 </span>"
+	  "format": "<span size='13000' foreground='#f9e2af'> 󰓅 </span>"
   },
 
   "clock": {
@@ -112,7 +114,7 @@
     "drawer": {
         "transition-duration": 500,
         "children-class": "not-power",
-        "transition-left-to-right": false,
+        "transition-left-to-right": false
     },
     "modules": [
         "custom/power", 

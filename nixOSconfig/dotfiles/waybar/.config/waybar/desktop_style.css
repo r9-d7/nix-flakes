@@ -7,6 +7,11 @@
 	font-size: 14px;
 	min-height: 8px;
     font-weight: bold;
+
+	margin-top:12px;
+	margin-left: 12px;
+	margin-right: 12px;
+	margin-bottom: 0px;
 }
 
 window#waybar {
@@ -18,13 +23,15 @@ window#waybar.hidden {
 }
 
 #window {
-	margin-top: 16px;
-    margin-bottom: 0px;
+	/*margin-top: 16px;*/
+    /*margin-bottom: 0px;*/
     margin-left: 20px;
+
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 0px;
     padding-bottom: 0px;
+
     border-radius: 10px;
 	transition: none;
     color: @lavender;
@@ -32,16 +39,18 @@ window#waybar.hidden {
 }
 
 #workspaces {
-	margin-top: 16px;
+	/*margin-top: 16px;*/
 	margin-left: 16px;
     margin-right: 16px;
-	margin-bottom: 0px;
+	/*margin-bottom: 0px;*/
+
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
+
     border-radius: 10px;
-	background: rgba(49,50,68,0.75);
+	background: @mantle;
 	transition: none;
 }
 
@@ -49,135 +58,124 @@ window#waybar.hidden {
 	transition: none;
 	color: @overlay2;
 	background: transparent;
+    border: 2px solid transparent;
+    font-size: 4px;
+	border-radius: 6px;
+
 	margin-top: 2px;
 	margin-bottom: 2px;
 	margin-left: 2px;
 	margin-right: 2px;
-    padding-top: 1px;
-    padding-bottom:0px;
-    padding-left: 2px;
-    padding-right: 2px;
-    border: 2px solid transparent;
-    font-size: 4px;
-	border-radius: 6px;
+
+    padding-top: 2px;
+    padding-bottom:1px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 #workspaces button.occupied {
 	transition: none;
 	color: @surface0;
-	background: transparent;
-	font-size: 4px;
 }
 
 #workspaces button.active {
-	color: @surface0;
+	color: @mantle;
 	background: @lavender;
-	margin-top: 1px;
-	margin-bottom: 1px;
-	margin-left: 1px;
-	margin-right: 1px;
-	padding-top: 2px;
-	padding-bottom: 1px;
-	padding-left:3px;
-	padding-right:3px;
 }
 
 #workspaces button:hover {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	/*border-color: @lavender;*/
 	color: @flamingo;
 }
 
 #workspaces button.active:hover {
-    color: @surface2;
-	background: @flamingo;
+    color: @flamingo;
+	border :2px solid @mauve;
 }
 
 #pulseaudio {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
-    padding-left: 10px;
-	padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-   	border-radius: 8px;
-	transition: none;
-	color: @green;
-	background: rgba(49,50,68,0.75);
-    border: 2px solid transparent /*@green*/;
-}
+	/*margin-top: 16px;*/
+	margin-left: 12px;
+	/*margin-bottom: 0px;*/
 
-#bluetooth {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
     padding-left: 10px;
 	padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
    	border-radius: 8px;
 	transition: none;
-	color: @yellow;
-	background: rgba(49,50,68,0.75);
-    border: 2px solid transparent /*@yellow*/;
+	color: @sapphire;
+	background: @mantle;
+    border: 2px solid transparent;
 }
 
 #clock {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
+	/*margin-top: 16px;*/
+	margin-left: 12px;
+	/*margin-bottom: 0px;*/
+
     padding-left: 10px;
 	padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+
 	border-radius: 8px;
 	transition: none;
-	color: @peach;
-	background: rgba(49,50,68,0.75);
-    border: 2px solid transparent /*@peach*/;
+	color: @green;
+	background: @mantle;
+    border: 2px solid transparent;
 }
 
 #tray {
-	margin-top: 16px;
-	margin-left: 16px;
+	/*margin-top: 16px;*/
+	margin-left: 12px;
 	margin-bottom: 0px;
+
     padding-left: 10px;
 	padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+
     border-radius: 8px;
 	transition: none;
-	color: @blue; /*#B5E8E0;*/
-	background: rgba(49,50,68,0.75); 
-    border: 2px solid transparent /*@blue*/;
+	color: @text;
+	background: @mantle; 
+    border: 2px solid transparent;
 }
 
 #idle_inhibitor {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
+	/*margin-top: 16px;*/
+	margin-left: 12px;
+	/*margin-bottom: 0px;*/
+
     padding-left: 2px;
 	padding-right: 2px;
     padding-top: 5px;
     padding-bottom: 5px;
+
     border-radius: 8px;
 	transition: none;
-	color: @mauve;
-	background: rgba(49,50,68,0.75); 
-    border: 2px solid transparent /*@mauve*/;
+	color: @lavender;
+	background: @mantle;
+    border: 2px solid transparent;
     min-width: 55px;
 }
 
 #network {
-    padding-left: 10px;
-	padding-right: 16px;
-   	border-radius: 0px;
+    /*margin-top: 16px;*/
+	margin-left: 12px;
+	margin-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+   	border-radius: 8px;
 	transition: none;
-	color: @green;
-	background: rgba(0,0,0,0);
+	color: @teal;
+	background: @mantle;
+	border: 2px solid transparent;
 }
 
 
@@ -186,8 +184,8 @@ window#waybar.hidden {
 	padding-right: 4px;
     border-radius: 0px;
 	transition: none;
-	color: @green;
-	background: rgba(0,0,0,0);
+	color: @lavender;
+	background: transparent;
 }
 
 #cpu {
@@ -195,8 +193,8 @@ window#waybar.hidden {
 	padding-right: 2px;
     border-radius: 0px;
 	transition: none;
-	color: @green;
-	background: rgba(0,0,0,0);
+	color: @lavender;
+	background: transparent;
 }
 
 /* Custom Modules */
@@ -206,8 +204,8 @@ window#waybar.hidden {
 	padding-right: 0px;
     border-radius: 0px;
 	transition: none;
-	color: @green;
-	background: rgba(0,0,0,0);
+	color: @lavender;
+	background: transparent;
 }
 
 #custom-hardwareinfo {
@@ -215,8 +213,8 @@ window#waybar.hidden {
 	padding-right: 4px;
     border-radius: 8px;
 	transition: none;
-	color: @sky;
-	background: rgba(0,0,0,0); 
+	color: @yellow;
+	background: transparent; 
 }
 
 #custom-quit {
@@ -227,7 +225,7 @@ window#waybar.hidden {
     border-radius: 8px;
 	transition: none;
 	color: @text;
-	background: rgba(0,0,0,0); 
+	background: transparent; 
 }
 
 #custom-lock {
@@ -238,7 +236,7 @@ window#waybar.hidden {
     border-radius: 8px;
 	transition: none;
 	color: @text;
-	background: rgba(0,0,0,0);
+	background: transparent;
 }
 
 #custom-reboot {
@@ -249,7 +247,7 @@ window#waybar.hidden {
     border-radius: 8px;
 	transition: none;
 	color: @text;
-	background: rgba(0,0,0,0);
+	background: transparent;
 }
 
 #custom-power {
@@ -259,27 +257,28 @@ window#waybar.hidden {
     padding-bottom: 5px;
     border-radius: 8px;
 	transition: none;
-	color: @red;
-	background: rgba(0,0,0,0);
+	color: @peach;
+	background: transparent;
 }
 
 /* Groups */
 #hardware {
-    margin-top: 16px;
-	margin-left: 16px;
+    /*margin-top: 16px;*/
+	margin-left: 12px;
+
     border-radius: 8px;
 	transition: none;
-	background:rgba(49,50,68,0.75); 
+	background:@mantle; 
     border: 2px solid transparent /*@sky*/;
 }
 
 #group-power {
-    margin-top: 16px;
-	margin-left: 16px;
-	margin-right:16px;
+    /*margin-top: 16px;*/
+	margin-left: 12px;
+	/*margin-right:16px;*/
     border-radius: 8px;
 	transition: none;
-	background: rgba(49,50,68,0.75); 
+	background: @mantle; 
     border: 2px solid transparent /*@red*/;
 }
 
