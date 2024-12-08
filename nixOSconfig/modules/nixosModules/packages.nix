@@ -25,6 +25,7 @@
     gamescope
     inputs.mediaplayer.packages.${pkgs.system}.default
     playerctl
+    heroic
   ];
 
   # Programs

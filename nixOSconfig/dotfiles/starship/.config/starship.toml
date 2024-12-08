@@ -69,19 +69,19 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-color1 = "#292e42"
+color1 = "#565f89"
 color2 = "#3d59a1"
 color3 = "#9d7cd8"
 color4 = "#41a6b5"
 color5 = "#ff757f"
-color6 = "#ff9e64"
+color6 = "#c53b53"
 
-fg1 = "#b4befe"
-fg2 = "#ccd6f4"
-fg3 = "#ccd6f4"
-fg4 = "#ccd6f4"
-fg5 = "#ccd6f4"
-fg6 = "#ccd6f4"
+fg1 = "#c0caf5"
+fg2 = "#c0caf5"
+fg3 = "#c0caf5"
+fg4 = "#c0caf5"
+fg5 = "#c0caf5"
+fg6 = "#c0caf5"
 
 [os]
 disabled = false
