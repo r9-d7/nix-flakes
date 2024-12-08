@@ -3,364 +3,310 @@
 * {
 	border: none;
 	border-radius: 0px;
-	font-family: "MesloLGS Nerd Font Mono Bold" ;
+	font-family: "CaskaydiaCove Nerd Font" ;
 	font-size: 14px;
 	min-height: 8px;
-        font-weight: bold;
+    font-weight: bold;
 }
 
 window#waybar {
 	background: transparent;
 }
 
-
 window#waybar.hidden {
 	opacity: 0.2;
 }
 
-
 #window {
-	margin-top: 16px;
-        margin-bottom: 0px;
-        margin-left: 20px;
-    
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-	
-        border-radius: 10px;
+	/*margin-top: 16px;*/
+    /*margin-bottom: 0px;*/
+    margin-left: 20px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    border-radius: 10px;
 	transition: none;
-        color: @lavender;
+    color: @lavender;
 	background: transparent;
 }
+
 #workspaces {
-	margin-top: 16px;/*8px;*/
-	margin-left: 16px;
-        margin-right: 16px;
-	margin-bottom: 0px;/*8px;*/
-    
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    
-        border-radius: 10px;
-	background: rgba(49,50,68,0.5); /*#161320;*/
+	/*margin-top: 16px;*/
+	/*margin-left: 16px;*/
+    margin-right: 12px;
+	/*margin-bottom: 0px;*/
+
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 10px;
+	background: @base;
 	transition: none;
 }
 
 #workspaces button {
 	transition: none;
-	color: @overlay2; /*#B5E8E0; pale teal*/
+	color: @overlay2;
 	background: transparent;
-    
-        padding-top: 1px;
-        padding-bottom:0px;
-        padding-left: 2px;
-        padding-right: 2px;
-    
-        border: 3px solid transparent;
-        font-size: 4px;
-	border-radius: 7px;
+    border: 2px solid transparent;
+    font-size: 4px;
+	border-radius: 6px;
+
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+
+    padding-top: 2px;
+    padding-bottom:1px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 #workspaces button.occupied {
 	transition: none;
-	color: @surface0; /*#F28FAD; pale pink*/
-	background: transparent;
-	font-size: 4px;
+	color: @surface0;
 }
 
 #workspaces button.active {
-	color: @surface0; /*@overlay2;*/
-        /*border-color: @lavender; */
+	color: @base;
 	background: @lavender;
-
-    
-        /*border-top: 2px solid @mauve; #ABE9B3;*/
-        /*border-bottom: 2px solid @mauve; #ABE9B3;*/
 }
 
 #workspaces button:hover {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	border-color: @surface1; /*#E8A2AF; pale pink*/
-	border-radius: 8px;
-	color: @lavender; /*#E8A2AF; pale pink*/
+	color: @flamingo;
 }
 
 #workspaces button.active:hover {
-        color: @surface2;
-	background: @blue;
-	border-color: transparent;
-	border-radius: 7px;
+    color: @flamingo;
+	border :2px solid @mauve;
 }
-
-/* OOTB Modules */
-
 
 #pulseaudio {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
-    
-        padding-left: 10px;
+	margin-left: 12px;
+
+    padding-left: 10px;
 	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
+    padding-top: 5px;
+    padding-bottom: 5px;
    	border-radius: 8px;
-	transition: none;
-	color: @lavender; /*#1A1826;*/
-	background: rgba(49,50,68,0.5);
-        border: 2px solid @lavender;
-}
-
-#bluetooth {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
-    
-        padding-left: 10px;
-	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-   	border-radius: 8px;
-	transition: none;
-	color: @yellow;
-	background: rgba(49,50,68,0.5);
-        border: 2px solid @yellow;
-}
-
-
-#backlight {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
-    
-        padding-left: 12px;
-	padding-right: 12px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-	border-radius: 8px;
 	transition: none;
 	color: @sapphire;
-	background: rgba(49,50,68,0.5);
-	border: 2px solid @sapphire;
+	background: @base;
+    border: 2px solid transparent;
 }
 
-#clock {
-	margin-top: 16px;
+/* Laptop Specific Modules */
+#backlight {
 	margin-left: 16px;
-	margin-right: 16px;
-	margin-bottom: 0px;
     
-        padding-left: 10px;
-	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    
-	border-radius: 8px;
-	transition: none;
-	color: @mauve;
-	background: rgba(49,50,68,0.5);
-        border: 2px solid @mauve;
-}
-
-
-#battery {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
-    
-        padding-left: 10px;
-	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    
+    padding-left: 12px;
+	padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+	
 	border-radius: 8px;
 	transition: none;
 	color: @teal;
 	background: rgba(49,50,68,0.5);
-        border: 2px solid @teal;
+	border: 2px solid @transparent;
+}
+
+#battery {
+	margin-left: 16px;
+	    
+    padding-left: 10px;
+	padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+	border-radius: 8px;
+	transition: none;
+	color: @green;
+	background: rgba(49,50,68,0.5);
+    border: 2px solid @transparent;
 }
 
 
-#tray {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
+#clock {
+	margin-left: 12px;
 
-        padding-left: 10px;
+    padding-left: 10px;
 	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-        border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+	border-radius: 8px;
 	transition: none;
-	color: @subtext1; /*#B5E8E0;*/
-	background: rgba(49,50,68,0.5); 
-        border: 2px solid @subtext1; /*#ABE9B3;*/
+	color: @peach;
+	background: @base;
+    border: 2px solid transparent;
+}
+
+#tray {
+	margin-left: 12px;
+
+    padding-left: 10px;
+	padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 8px;
+	transition: none;
+	color: @text;
+	background: @base; 
+    border: 2px solid transparent;
 }
 
 #idle_inhibitor {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
+	margin-left: 12px;
 
-        padding-left: 2px;
-	padding-right: 2px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-        border-radius: 8px;
+    padding-left: 0px;
+	padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 8px;
 	transition: none;
-	color: @mauve; /*#B5E8E0;*/
-	background: rgba(49,50,68,0.5); 
-        border: 2px solid @mauve; /*#ABE9B3;*/
-        min-width: 55px;
+	color: @lavender;
+	background: @base;
+    border: 2px solid transparent;
+    min-width: 55px;
 }
 
 #network {
-        padding-left: 10px;
-	padding-right: 16px;
-        	
-   	border-radius: 0px;
+	margin-left: 12px;
+	
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+   	border-radius: 8px;
 	transition: none;
-	color: @green;
-	background: rgba(0,0,0,0);
+	color: @yellow;
+	background: @base;
+	border: 2px solid transparent;
 }
 
 
 #memory {
-	padding-left: 0px;
+	padding-left: 4px;
 	padding-right: 4px;
-	
-        border-radius: 0px;
+    border-radius: 0px;
 	transition: none;
-	color: @green;
-	background: rgba(0,0,0,0);
+	color: @maroon;
+	background: transparent;
 }
 
 #cpu {
-	padding-left: 2px;
+	padding-left: 12px;
 	padding-right: 2px;
-	
-        border-radius: 0px;
+    border-radius: 0px;
 	transition: none;
-	color: @green;
-	background: rgba(0,0,0,0);
+	color: @maroon;
+	background: transparent;
 }
 
 /* Custom Modules */
 
-#custom-gpu {
-	padding-left: 2px;
-	padding-right: 0px;
-	
-        border-radius: 0px;
+#custom-media {
+	margin-right: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+   	border-radius: 8px;
 	transition: none;
-	color: @green; /*#B5E8E0;*/
-	background: rgba(0,0,0,0);
+	color: @lavender;
+	background: @base;
+	border: 2px solid transparent;
+}
+
+#custom-gpu {
+	padding-left: 6px;
+	padding-right: 0px;
+    border-radius: 0px;
+	transition: none;
+	color: @maroon;
+	background: transparent;
 }
 
 #custom-hardwareinfo {
-	padding-left: 0px;
-	padding-right: 4px;
-        	
-        border-radius: 8px;
+	padding-left: 3px;
+	padding-right: 6px;
+    border-radius: 8px;
 	transition: none;
-	color: @yellow; /*#B5E8E0;*/
-	background: rgba(49,50,68,0.5); 
-}
-
-#custom-brightness {
-	margin-top: 16px;
-	margin-left: 16px;
-	margin-bottom: 0px;
-
-        padding-left: 10px;
-	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-        border-radius: 8px;
-	transition: none;
-	color: @maroon; /*#B5E8E0;*/
-	background: rgba(49,50,68,0.5); 
-        border: 2px solid @maroon; /*#ABE9B3;*/
-        min-width: 55px;
+	color: @maroon;
+	background: transparent; 
 }
 
 #custom-quit {
 	padding-left: 10px;
 	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-        border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
 	transition: none;
-	color: @text; /*#B5E8E0;*/
-	background: rgba(0,0,0,0); 
+	color: @text;
+	background: transparent; 
 }
 
 #custom-lock {
 	padding-left: 10px;
 	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-        border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
 	transition: none;
-	color: @text; /*#B5E8E0;*/
-	background: rgba(0,0,0,0);
+	color: @text;
+	background: transparent;
 }
 
 #custom-reboot {
 	padding-left: 10px;
 	padding-right: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-        border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
 	transition: none;
-	color: @text; /*#B5E8E0;*/
-	background: rgba(0,0,0,0);
+	color: @text;
+	background: transparent;
 }
 
 #custom-power {
-	padding-left: 10px;
-	padding-right: 8px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-	
-        border-radius: 8px;
+	padding-left: 12px;
+	padding-right: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
 	transition: none;
-	color: @maroon; /*#B5E8E0;*/
-	background: rgba(0,0,0,0);
+	color: @mauve;
+	background: transparent;
 }
 
 /* Groups */
 #hardware {
-        margin-top: 16px;
-	margin-left: 16px;
-        border-radius: 8px;
+	margin-left: 12px;
+
+    border-radius: 8px;
 	transition: none;
-	background: rgba(49,50,68,0.5); 
-        border: 2px solid @yellow;
+	background:@base; 
+    border: 2px solid transparent /*@sky*/;
 }
 
 #group-power {
-        margin-top: 16px;
-	margin-left: 16px;
-        border-radius: 8px;
+    margin-left: 12px;
+	
+    border-radius: 8px;
 	transition: none;
-	background: rgba(49,50,68,0.5); 
-        border: 2px solid @maroon;
+	background: @base; 
+    border: 2px solid transparent /*@red*/;
 }
-
-
