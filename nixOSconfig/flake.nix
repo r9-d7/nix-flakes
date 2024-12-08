@@ -11,6 +11,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # 4
+    mediaplayer = {
+      url = "github:nomisreual/mediaplayer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -25,8 +30,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/nixVault-LAPTOP/configuration.nix
-        catppuccin.nixosModules.catppuccin
-          
+        catppuccin.nixosModules.catppuccin          
         home-manager.nixosModules.home-manager
         {
           home-manager = {

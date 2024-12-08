@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
     
@@ -22,6 +22,9 @@
     nitch
     feh
     bibata-cursors
+    gamescope
+    inputs.mediaplayer.packages.${pkgs.system}.default
+    playerctl
   ];
 
   # Programs
@@ -37,6 +40,23 @@
     hyprlock.enable = true;
     zsh.enable = true;
   };
+
+  #nixpkgs.config.packageOverrides = pkgs: {
+  #  steam = pkgs.steam.override {
+  #    extraPkgs = pkgs: with pkgs; [
+  #      xorg.libXcursor
+  #      xorg.libXi
+  #      xorg.libXinerama
+  #      xorg.libXScrnSaver
+  #      libpng
+  #      libpulseaudio
+  #      libvorbis
+  #      stdenv.cc.cc.lib
+  #      libkrb5
+  #      keyutils
+  #    ];
+  #  };
+  #};
 
   # Font Packages
   fonts.packages = with pkgs; [
