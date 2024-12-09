@@ -29,7 +29,8 @@
 
   #waybar
   xdg.configFile."waybar/mocha.css".source = ./../../../../dotfiles/waybar/.config/waybar/mocha.css;
-  
+  xdg.configFile."waybar/custom.css".sourrce = ./../../../../dotfiles/waybar/.config/waybar/custom.css;
+
   # starship
   xdg.configFile."starship.toml".source = ./../../../../dotfiles/starship/.config/starship.toml;
   
