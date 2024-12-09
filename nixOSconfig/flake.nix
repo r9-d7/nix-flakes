@@ -16,6 +16,8 @@
       url = "github:nomisreual/mediaplayer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    #5
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
 
   };
 
@@ -39,8 +41,9 @@
             extraSpecialArgs = { inherit inputs; };
             users.rossf = {
               imports = [
-                ./hosts/laptop/home.nix
-                catppuccin.homeManagerModules.catppuccin
+                ./hosts/nixVault-LAPTOP/home.nix
+                  catppuccin.homeManagerModules.catppuccin
+                  inputs.spicetify-nix.homeManagerModule
               ];
             };
           };
@@ -63,7 +66,8 @@
             users.rossf = {
               imports = [
                 ./hosts/nixVault-DESKTOP/home.nix
-                catppuccin.homeManagerModules.catppuccin
+                  catppuccin.homeManagerModules.catppuccin
+                  inputs.spicetify-nix.homeManagerModule
               ];
             };
           };
