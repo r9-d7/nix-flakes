@@ -12,7 +12,6 @@
     hyprshot
     libnotify
     wofi
-    nwg-look
     lshw
     networkmanagerapplet
     brightnessctl
@@ -20,7 +19,7 @@
     python313
     fastfetch
     nitch
-    feh
+    sxiv
     bibata-cursors
     papirus-icon-theme
     gamescope

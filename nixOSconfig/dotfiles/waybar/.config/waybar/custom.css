@@ -1,0 +1,22 @@
+@define-color colorD1 #f7768e; /* power menu */
+@define-color colorD2 #e0af68; /* sysinfo */
+@define-color colorD3 #9ece6a; /* clock/date */
+@define-color colorD4 #73daca; /* network info */
+@define-color colorD5 #2ac3de; /* pulseaudio */
+@define-color colorD6 #7aa2f7; /* idle-inhibitor */
+@define-color colorD7 #bb9af7; /* left modules */
+
+
+@define-color colorL1 #f7768e; /* power menu */
+@define-color colorL2 #ff9e64; /* sysinfo */
+@define-color colorL3 #e0af68; /* clock/date */
+@define-color colorL4 #9ece6a; /* network */
+@define-color colorL5 #73daca; /* battery */
+@define-color colorL6 #2ac3de; /* backlight */
+@define-color colorL7 #7dcfff; /* pulseaudio */
+@define-color colorL8 #7aa2f7; /* idle-inhibitor */
+@define-color colorL9 #bb9af7; /* left modules */
+
+
+
+

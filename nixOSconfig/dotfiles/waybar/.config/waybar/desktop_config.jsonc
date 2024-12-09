@@ -98,7 +98,7 @@
 
   "custom/gpu": {
       "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-      "format": "<span size='13000' foreground='#f9e2af'>󰢮 </span>{}%",
+      "format": "<span size='13000' foreground='#e0af68'>󰢮 </span>{}%",
       "return-type": "",
       "interval": 15,
       "max-length": 10,
@@ -106,7 +106,7 @@
   },
 
   "custom/hardwareinfo": {
-	  "format": "<span size='13000' foreground='#f9e2af'> 󰓅 </span>"
+	  "format": "<span size='13000' foreground='#e0af68'> 󰓅 </span>"
   },
 
   "clock": {
@@ -131,19 +131,19 @@
   },
 
   "custom/quit": {
-    "format": "<span size='13000' foreground='#fab387'> 󰗼 </span> ",
+    "format": "<span size='13000' foreground='#f7768e'> 󰗼 </span> ",
     "tooltip": false,
     "on-click": "hyprctl dispatch exit"
   },
 
   "custom/lock": {
-    "format": " <span size='13000' foreground='#fab387'> 󰍁 </span> ",
+    "format": " <span size='13000' foreground='#f7768e'> 󰍁 </span> ",
     "tooltip": false,
     "on-click": "hyprlock"
   },
 
   "custom/reboot": {
-    "format": " <span size='13000' foreground='#fab387'> 󰜉 </span> ",
+    "format": " <span size='13000' foreground='#f7768e'> 󰜉 </span> ",
     "tooltip": false,
     "on-click": "reboot"
   },

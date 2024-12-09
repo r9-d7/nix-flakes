@@ -29,7 +29,7 @@ window#waybar.hidden {
 
     border-radius: 10px;
 	transition: none;
-    color: @lavender;
+    color: @colorL9;
 	background: transparent;
 }
 
@@ -75,7 +75,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
 	color: @base;
-	background: @lavender;
+	background: @colorL9;
 }
 
 #workspaces button:hover {
@@ -99,7 +99,7 @@ window#waybar.hidden {
     padding-bottom: 5px;
    	border-radius: 8px;
 	transition: none;
-	color: @sapphire;
+	color: @colorL7;
 	background: @base;
     border: 2px solid transparent;
 }
@@ -115,7 +115,7 @@ window#waybar.hidden {
 	
 	border-radius: 8px;
 	transition: none;
-	color: @teal;
+	color: @colorL6;
 	background: rgba(49,50,68,0.5);
 	border: 2px solid @transparent;
 }
@@ -130,7 +130,7 @@ window#waybar.hidden {
     
 	border-radius: 8px;
 	transition: none;
-	color: @green;
+	color: @colorL5;
 	background: rgba(49,50,68,0.5);
     border: 2px solid @transparent;
 }
@@ -146,7 +146,7 @@ window#waybar.hidden {
 
 	border-radius: 8px;
 	transition: none;
-	color: @peach;
+	color: @colorL3;
 	background: @base;
     border: 2px solid transparent;
 }
@@ -176,7 +176,7 @@ window#waybar.hidden {
 
     border-radius: 8px;
 	transition: none;
-	color: @lavender;
+	color: @colorL8;
 	background: @base;
     border: 2px solid transparent;
     min-width: 55px;
@@ -191,7 +191,7 @@ window#waybar.hidden {
 	padding-bottom: 5px;
    	border-radius: 8px;
 	transition: none;
-	color: @yellow;
+	color: @colorL4;
 	background: @base;
 	border: 2px solid transparent;
 }
@@ -202,7 +202,7 @@ window#waybar.hidden {
 	padding-right: 4px;
     border-radius: 0px;
 	transition: none;
-	color: @maroon;
+	color: @colorL2;
 	background: transparent;
 }
 
@@ -211,7 +211,7 @@ window#waybar.hidden {
 	padding-right: 2px;
     border-radius: 0px;
 	transition: none;
-	color: @maroon;
+	color: @colorL2;
 	background: transparent;
 }
 
@@ -225,7 +225,7 @@ window#waybar.hidden {
 	padding-bottom: 5px;
    	border-radius: 8px;
 	transition: none;
-	color: @lavender;
+	color: @colorL9;
 	background: @base;
 	border: 2px solid transparent;
 }
@@ -235,7 +235,7 @@ window#waybar.hidden {
 	padding-right: 0px;
     border-radius: 0px;
 	transition: none;
-	color: @maroon;
+	color: @colorL2;
 	background: transparent;
 }
 
@@ -244,7 +244,7 @@ window#waybar.hidden {
 	padding-right: 6px;
     border-radius: 8px;
 	transition: none;
-	color: @maroon;
+	color: @colorL2;
 	background: transparent; 
 }
 
@@ -288,7 +288,7 @@ window#waybar.hidden {
     padding-bottom: 5px;
     border-radius: 8px;
 	transition: none;
-	color: @mauve;
+	color: @colorL1;
 	background: transparent;
 }
 
