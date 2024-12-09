@@ -9,8 +9,6 @@
     cmatrix
     starship
     cava
-    papirus-icon-theme
-    bibata-cursors
     discord
     spotify
     prismlauncher

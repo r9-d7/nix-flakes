@@ -22,6 +22,7 @@
     nitch
     feh
     bibata-cursors
+    papirus-icon-theme
     gamescope
     inputs.mediaplayer.packages.${pkgs.system}.default
     playerctl
