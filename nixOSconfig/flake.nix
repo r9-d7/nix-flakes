@@ -17,7 +17,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     #5
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -43,7 +46,7 @@
               imports = [
                 ./hosts/nixVault-LAPTOP/home.nix
                   catppuccin.homeManagerModules.catppuccin
-                  inputs.spicetify-nix.homeManagerModule
+                  inputs.spicetify-nix.homeManagerModules.default
               ];
             };
           };
@@ -67,7 +70,7 @@
               imports = [
                 ./hosts/nixVault-DESKTOP/home.nix
                   catppuccin.homeManagerModules.catppuccin
-                  inputs.spicetify-nix.homeManagerModule
+                  inputs.spicetify-nix.homeManagerModules.default
               ];
             };
           };

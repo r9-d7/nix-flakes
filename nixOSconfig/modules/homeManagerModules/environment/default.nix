@@ -4,5 +4,6 @@
     ./dotfiles
     ./gtk.nix
     ./mako.nix
+    ./spicetify.nix
   ];
 }
