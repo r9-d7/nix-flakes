@@ -37,6 +37,10 @@
   # wofi
   xdg.configFile."wofi/style.css".source = ./../../../../dotfiles/wofi/.config/wofi/style.css;
 
+  # cava
+  xdg.configFile."cava/config".source = ./../../../../dotfiles/cava/.config/cava/config;
+
+
   # user scripts
   xdg.configFile."userscripts/mountonedrive.sh".source = ./../../../../dotfiles/scripts/.config/userscripts/mountonedrive.sh;
 
