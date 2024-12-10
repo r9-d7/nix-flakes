@@ -15,6 +15,8 @@
     prismlauncher
     rclone
     eza
+    lolcat
+    pipes
   ];
 
   imports = [

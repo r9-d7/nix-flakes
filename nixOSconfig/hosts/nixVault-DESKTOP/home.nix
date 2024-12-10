@@ -14,6 +14,7 @@
     rclone
     eza
     lolcat
+    pipes
   ];
 
   imports = [
