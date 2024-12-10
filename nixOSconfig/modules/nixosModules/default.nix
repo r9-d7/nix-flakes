@@ -5,5 +5,6 @@
       ./nvidia.nix
       ./main-user.nix
       ./nvidia-prime.nix
+      ./sddm
   ];
 }

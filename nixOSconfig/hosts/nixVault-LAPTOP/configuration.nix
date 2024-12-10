@@ -42,7 +42,7 @@
   
   # Graphics settings  
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.enable = true;
   
   # Bluetooth Settings
   hardware.bluetooth.enable = true;

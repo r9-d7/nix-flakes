@@ -26,6 +26,13 @@
     inputs.mediaplayer.packages.${pkgs.system}.default
     playerctl
     heroic
+    catppuccin-sddm.override {
+      flavor = "mocha";
+      font = "CaskaydiaCove Nerd Font";
+      fontSize = "12";
+      #background = "${./wallpaper.png}";
+      #loginBackground = true;
+    }
   ];
 
   # Programs
