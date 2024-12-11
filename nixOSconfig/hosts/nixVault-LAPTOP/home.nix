@@ -11,7 +11,6 @@
     starship
     cava
     discord
-    spotify
     prismlauncher
     rclone
     eza

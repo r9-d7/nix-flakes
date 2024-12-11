@@ -50,7 +50,7 @@
 
   "backlight": {
     "device": "intel_backlight",
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "]
   },
   
@@ -63,7 +63,7 @@
         "critical": 15
     },
 
-    "format": "{icon}  {capacity}%",
+    "format": "{icon} {capacity}%",
     "format-plugged": "󱐥  {capacity}%",
     "format-charging": "󰂄  {capacity}%",
     "format-icons": ["", "", "", "", ""],
@@ -116,7 +116,6 @@
 	  },
 	  "modules": [
 		  "custom/hardwareinfo",
-		  "network",
 		  "cpu",
 		  "custom/gpu",
 		  "memory"
