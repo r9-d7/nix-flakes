@@ -26,6 +26,9 @@
     inputs.mediaplayer.packages.${pkgs.system}.default
     playerctl
     heroic
+    libreoffice-qt
+    hunspell
+    hunspellDicts.en_US
   ];
 
   # Programs
