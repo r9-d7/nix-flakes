@@ -43,7 +43,9 @@
   # Graphics settings  
   services.xserver.enable = true;
   # services.displayManager.sddm.enable = true;
-  
+
+  services.xserver.desktopManager.gnome.enable = true; 
+
   # Bluetooth Settings
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
