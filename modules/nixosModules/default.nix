@@ -1,10 +1,8 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   imports = [ 
-      ./packages.nix
-      ./nvidia.nix
-      ./main-user.nix
-      ./nvidia-prime.nix
+      ./system
+      ./nvidia
       ./sddm
   ];
 }

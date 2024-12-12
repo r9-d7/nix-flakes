@@ -1,9 +1,8 @@
-{ config, lib, pkgs, ...}:
+{ pkgs, ...}:
 {
   imports = [ 
     ./dotfiles
     ./gtk.nix
     ./mako.nix
-    ./spicetify.nix
   ];
 }

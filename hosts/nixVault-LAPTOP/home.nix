@@ -4,23 +4,9 @@
   home.username = "rossf";
   home.homeDirectory = "/home/rossf";
   home.stateVersion = "24.11";
-  home.packages = with pkgs; [
-    git
-    nitch
-    cmatrix
-    starship
-    cava
-    discord
-    prismlauncher
-    rclone
-    eza
-    lolcat
-    pipes
-  ];
 
   imports = [
-    ./../../modules/homeManagerModules/code
-    ./../../modules/homeManagerModules/environment
+    ./../../modules/homeManagerModules
   ];
 
   nixpkgs.config.allowUnfree = true;

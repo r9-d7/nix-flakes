@@ -1,8 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   imports = [ 
       ./git.nix
-      ./vscode.nix
       ./zsh.nix
       ./neovim.nix
   ];
