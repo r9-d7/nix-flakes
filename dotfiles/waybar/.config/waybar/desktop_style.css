@@ -46,7 +46,7 @@ window#waybar.hidden {
     padding-bottom: 5px;
 
     border-radius: 10px;
-	background: @base;
+	background: @modBack;
 	transition: none;
 }
 
@@ -75,7 +75,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-	color: @base;
+	color: @modBack;
 	background: @colorD7;
 }
 
@@ -103,7 +103,7 @@ window#waybar.hidden {
    	border-radius: 8px;
 	transition: none;
 	color: @colorD5;
-	background: @base;
+	background: @modBack;
     border: 2px solid transparent;
 }
 
@@ -120,7 +120,7 @@ window#waybar.hidden {
 	border-radius: 8px;
 	transition: none;
 	color: @colorD3;
-	background: @base;
+	background: @modBack;
     border: 2px solid transparent;
 }
 
@@ -137,7 +137,7 @@ window#waybar.hidden {
     border-radius: 8px;
 	transition: none;
 	color: @text;
-	background: @base; 
+	background: @modBack; 
     border: 2px solid transparent;
 }
 
@@ -154,7 +154,7 @@ window#waybar.hidden {
     border-radius: 8px;
 	transition: none;
 	color: @colorD6;
-	background: @base;
+	background: @modBack;
     border: 2px solid transparent;
     min-width: 55px;
 }
@@ -170,7 +170,7 @@ window#waybar.hidden {
    	border-radius: 8px;
 	transition: none;
 	color: @colorD4;
-	background: @base;
+	background: @modBack;
 	border: 2px solid transparent;
 }
 
@@ -204,7 +204,7 @@ window#waybar.hidden {
    	border-radius: 8px;
 	transition: none;
 	color: @colorD7;
-	background: @base;
+	background: @modBack;
 	border: 2px solid transparent;
 }
 
@@ -277,7 +277,7 @@ window#waybar.hidden {
 
     border-radius: 8px;
 	transition: none;
-	background:@base; 
+	background:@modBack; 
     border: 2px solid transparent /*@sky*/;
 }
 
@@ -287,7 +287,7 @@ window#waybar.hidden {
 	/*margin-right:16px;*/
     border-radius: 8px;
 	transition: none;
-	background: @base; 
+	background: @modBack; 
     border: 2px solid transparent /*@red*/;
 }
 

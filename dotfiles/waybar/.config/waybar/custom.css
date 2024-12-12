@@ -17,6 +17,4 @@
 @define-color colorL8 #7aa2f7; /* idle-inhibitor */
 @define-color colorL9 #bb9af7; /* left modules */
 
-
-
-
+@define-color modBack #414868; /* module background */

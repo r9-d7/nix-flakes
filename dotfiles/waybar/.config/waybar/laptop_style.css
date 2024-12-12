@@ -46,7 +46,7 @@ window#waybar.hidden {
     padding-bottom: 5px;
 
     border-radius: 10px;
-	background: @base;
+	background: @modBack;
 	transition: none;
 }
 
@@ -75,7 +75,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-	color: @base;
+	color: @modBack;
 	background: @colorL9;
 }
 
@@ -101,7 +101,7 @@ window#waybar.hidden {
    	border-radius: 8px;
 	transition: none;
 	color: @colorL7;
-	background: @base;
+	background: @modBack;
     border: 2px solid transparent;
 }
 
@@ -117,7 +117,7 @@ window#waybar.hidden {
 	border-radius: 8px;
 	transition: none;
 	color: @colorL6;
-	background: @base;
+	background: @modBack;
 	border: 2px solid transparent;
 }
 
@@ -132,7 +132,7 @@ window#waybar.hidden {
 	border-radius: 8px;
 	transition: none;
 	color: @colorL5;
-	background: @base;
+	background: @modBack;
     border: 2px solid transparent;
 }
 
@@ -148,7 +148,7 @@ window#waybar.hidden {
 	border-radius: 8px;
 	transition: none;
 	color: @colorL3;
-	background: @base;
+	background: @modBack;
     border: 2px solid transparent;
 }
 
@@ -163,7 +163,7 @@ window#waybar.hidden {
     border-radius: 8px;
 	transition: none;
 	color: @text;
-	background: @base; 
+	background: @modBack; 
     border: 2px solid transparent;
 }
 
@@ -178,7 +178,7 @@ window#waybar.hidden {
     border-radius: 8px;
 	transition: none;
 	color: @colorL8;
-	background: @base;
+	background: @modBack;
     border: 2px solid transparent;
     min-width: 55px;
 }
@@ -193,7 +193,7 @@ window#waybar.hidden {
    	border-radius: 8px;
 	transition: none;
 	color: @colorL4;
-	background: @base;
+	background: @modBack;
 	border: 2px solid transparent;
 }
 
@@ -227,7 +227,7 @@ window#waybar.hidden {
    	border-radius: 8px;
 	transition: none;
 	color: @colorL9;
-	background: @base;
+	background: @modBack;
 	border: 2px solid transparent;
 }
 
@@ -299,7 +299,7 @@ window#waybar.hidden {
 
     border-radius: 8px;
 	transition: none;
-	background:@base; 
+	background:@modBack; 
     border: 2px solid transparent /*@sky*/;
 }
 
@@ -308,6 +308,6 @@ window#waybar.hidden {
 	
     border-radius: 8px;
 	transition: none;
-	background: @base; 
+	background: @modBack; 
     border: 2px solid transparent /*@red*/;
 }
