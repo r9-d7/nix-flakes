@@ -26,6 +26,7 @@
   programs = {
     firefox.enable = true;
     thunar.enable = true;
+    zsh.enable = true;
 
     hyprland = {
       enable = true;
