@@ -4,8 +4,16 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  
+  networking = {
+    networkmanager.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 80 443 ];
+    };
+  };
+
+  services.fail2ban.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -15,7 +23,6 @@
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
   };
   
   # Graphics settings  

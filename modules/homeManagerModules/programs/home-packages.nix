@@ -19,6 +19,9 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
+    asciiquarium-transparent
+    cbonsai
+    cowsay
   ];
 }
 
