@@ -19,10 +19,13 @@
   xdg.configFile."hypr/wallpapers/galaxy.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/galaxy.jpeg;
 
   # hyprpaper
-  xdg.configFile."hypr/wallpapers/winterforest.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/winterforest.jpeg;
   xdg.configFile."hypr/hyprpaper.conf".source = ./../../../../dotfiles/hyprpaper/.config/hypr/hyprpaper.conf;
+  xdg.configFile."hypr/wallpapers/winterforest.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/winterforest.jpeg;
+  xdg.configFile."hypr/wallpapers/retrofantasy.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/retrofantasy.png;
   xdg.configFile."hypr/wallpapers/foggybridge.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/foggybridge.png;
-
+  xdg.configFile."hypr/wallpapers/retrospace.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/retrospace.png;
+  xdg.configFile."hypr/wallpapers/cloudynight.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/cloudynight.png;
+  
   #kitty
   xdg.configFile."kitty/kitty.conf".source = ./../../../../dotfiles/kitty/.config/kitty/kitty.conf;
   xdg.configFile."kitty/current-theme.conf".source = ./../../../../dotfiles/kitty/.config/kitty/current-theme.conf;
