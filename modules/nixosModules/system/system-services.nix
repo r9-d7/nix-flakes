@@ -34,7 +34,7 @@
   services.xserver.enable = true;
   
   # Enable Gnome
-  services.xserver.desktopManager.gnome.enable = true; 
+  services.xserver.desktopManager.xfce.enable = true; 
 
   # Bluetooth Settings
   hardware.bluetooth.enable = true;
