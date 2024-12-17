@@ -46,5 +46,5 @@
 
   # user scripts
   xdg.configFile."userscripts/mountonedrive.sh".source = ./../../../../dotfiles/scripts/.config/userscripts/mountonedrive.sh;
-
+  xdg.configFile."fastfetch/config.jsonc".source = ./../../../../dotfiles/fastfetch/.config/fastfetch/config.jsonc;
 }
