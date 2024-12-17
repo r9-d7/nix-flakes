@@ -1,7 +1,12 @@
 { config, lib, pkgs, ... }:
 {
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  # Use the grub EFI boot loader.
+  boot.loader.grub = { 
+    enable = true;
+    efiSupport = true;
+    device = "nodev";
+  };
+
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking = {
