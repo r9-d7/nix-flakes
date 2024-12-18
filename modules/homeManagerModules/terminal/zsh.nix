@@ -16,13 +16,14 @@
       nixbuild = "sudo nixos-rebuild switch --flake '/home/rossf/nix-flakes'";
       neofetch = "fastfetch";
       nf = "fastfetch";
+      ff = "fastfetch";
       flakeupdate-all = "nix flake lock --update-all";
       flakeupdate-input = "nix flake lock --update-input"; #follow by space then input name
       nixupdate = "sudo nix-channel --update";
       nixupgrade = "sudo nixos-rebuild switch --upgrade";
       generations = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
     };
-    envExtra = ''nitch'';
+    envExtra = ''fastfetch'';
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "starship" "sudo" ];

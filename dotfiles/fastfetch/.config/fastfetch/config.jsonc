@@ -1,122 +1,112 @@
+// Inspired by Catnap
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "source": "~/.config/fastfetch/nixlogo2.png",
         "type": "kitty",
-        "height": 15,
-        "width": 30,
+		"height": 16,
         "padding": {
             "top": 3,
-            "left": 3
+			"bottom": 2
         }
     },
+    "display": {
+        "separator": " "
+    },
     "modules": [
-        "break",
         {
-            "type": "custom",
-            "format": "\u001b[32m┌──────────────────────Hardware──────────────────────┐"
+            "key": "\u001b[37m╭────────────╮",
+            "type": "custom"
         },
         {
-            "type": "host",
-            "key": "│  ",
-            "keyColor": "green"
+            "key": "\u001b[37m│ {#35}  user    {#keys}\u001b[37m│",
+            "type": "title",
+            "format": "{user-name}"
         },
         {
+            "key": "\u001b[37m│ {#36}󰇅  hname   {#keys}\u001b[37m│",
+            "type": "title",
+            "format": "{host-name}"
+        },
+        {
+            "key": "\u001b[37m│ {#32}󰅐  uptime  {#keys}\u001b[37m│",
+            "type": "uptime"
+        },
+        {
+            "key": "\u001b[37m│ {#33}{icon}  distro  {#keys}\u001b[37m│",
+            "type": "os"
+        },
+        {
+            "key": "\u001b[37m│ {#31}  kernel  {#keys}\u001b[37m│",
+            "type": "kernel"
+        },
+        {
+            "key": "\u001b[37m│ {#35}󰏖  pkgs    {#keys}\u001b[37m│",
+            "type": "packages"
+        },
+        {
+            "key": "\u001b[37m│ {#36}  shell   {#keys}\u001b[37m│",
+            "type": "shell"
+        },
+        {
+            "key": "\u001b[37m│ {#32}󰍛  cpu     {#keys}\u001b[37m│",
             "type": "cpu",
-            "key": "│  ",
-            "showPeCoreCount": true,
-            "keyColor": "green"
+            "showPeCoreCount": true
         },
         {
+            "key": "\u001b[37m│ {#33}󰢮  gpu     {#keys}\u001b[37m│",
             "type": "gpu",
-            "key": "│ 󰢮 ",
-            "keyColor": "green"
+            "showPeCoreCount": true
         },
         {
-            "type": "memory",
-            "key": "│  ",
-            "keyColor": "green"
-        },
-        {
-            "type": "disk",
-            "key": "│ 󰉉 ",
-            "keyColor": "green",
-			"folders": "/"
-        },
-        {
-            "type": "disk",
-            "key": "│  ",
-            "keyColor": "green",
-			"folders": "/home"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[32m└────────────────────────────────────────────────────┘"
-        },
-
-
-        "break",
-
-
-        {
-            "type": "custom",
-            "format": "\u001b[36m┌──────────────────────Software──────────────────────┐"
-        },
-
-        {
-            "type": "os",
-            "key": "│  ",
-            "keyColor": "cyan"
-        },
-        {
-            "type": "kernel",
-            "key": "│  ",
-            "keyColor": "cyan"
-        },
-        {
-            "type": "packages",
-            "key": "│ 󰏖 ",
-            "keyColor": "cyan"
-        },
-        {
-            "type": "shell",
-            "key": "│  ",
-            "keyColor": "cyan"
-        },
-        {
+            "key": "\u001b[37m│ {#31}󰨜  driver  {#keys}\u001b[37m│",
             "type": "gpu",
-            "key": "│ 󰢮 ",
-            "format": "{3}",
-            "keyColor": "cyan"
+            "format": "{3}"
         },
         {
-            "type": "custom",
-            "format": "\u001b[36m└────────────────────────────────────────────────────┘"
+            "key": "\u001b[37m│ {#35}  memory  {#keys}\u001b[37m│",
+            "type": "memory"
         },
-
-
-        "break",
-        
-
+        {
+            "key": "\u001b[37m│ {#36}󰯍  swap    {#keys}\u001b[37m│",
+            "type": "swap"
+        },
 		{
-            "type": "custom",
-            "format": "\u001b[35m┌────────────────────Uptime / Age────────────────────┐"
+            "key": "\u001b[37m│ {#32}󰉉  root    {#keys}\u001b[37m│",
+            "type": "disk",
+            "folders": "/"
         },
         {
-            "type": "uptime",
-            "key": "│  ",
-            "keyColor": "magenta"
+            "key": "\u001b[37m│ {#33}  home    {#keys}\u001b[37m│",
+            "type": "disk",
+            "folders": "/home"
         },
         {
-            "type": "command",
-            "key": "│ 󰃰 ",
-            "keyColor": "magenta",
-            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+            "key": "\u001b[37m│ {#31}󰩟  loc IP  {#keys}\u001b[37m│",
+            "type": "localip"
         },
         {
-            "type": "custom",
-            "format": "\u001b[35m└────────────────────────────────────────────────────┘"
+            "key": "\u001b[37m│ {#35}󱦂  pub IP  {#keys}\u001b[37m│",
+            "type": "publicip",
+            "timeout": 1000
         },
-        "break"
+        {
+            "key": "\u001b[37m│ {#36}  Wi-Fi   {#keys}\u001b[37m│",
+            "type": "wifi",
+            "format": "{ssid}"
+        },
+        {
+            "key": "\u001b[37m├────────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "\u001b[37m│ {#39}  colors  {#keys}\u001b[37m│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "\u001b[37m╰────────────╯",
+            "type": "custom"
+        }
     ]
 }
