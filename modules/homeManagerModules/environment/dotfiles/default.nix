@@ -46,5 +46,9 @@
 
   # user scripts
   xdg.configFile."userscripts/mountonedrive.sh".source = ./../../../../dotfiles/scripts/.config/userscripts/mountonedrive.sh;
+  
+  # fastfetch
+  xdg.configFile."fastfetch/nixlogo1.png".source = ./../../../../dotfiles/fastfetch/.config/fastfetch/nixlogo1.png;
+  xdg.configFile."fastfetch/nixlogo2.png".source = ./../../../../dotfiles/fastfetch/.config/fastfetch/nixlogo2.png;
   xdg.configFile."fastfetch/config.jsonc".source = ./../../../../dotfiles/fastfetch/.config/fastfetch/config.jsonc;
 }
