@@ -1,0 +1,127 @@
+// Inspired by Catnap
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "~/.config/fastfetch/nixlogo2.png",
+        "type": "kitty",
+		"height": 16,
+        "padding": {
+            "top": 3,
+			"bottom": 2
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        {
+            "key": "\u001b[37m╭────────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "\u001b[37m│ {#35}  user    {#keys}\u001b[37m│",
+            "type": "title",
+            "format": "{user-name}",
+			"keyColor": "magenta"
+        },
+        {
+            "key": "\u001b[37m│ {#36}󰇅  hname   {#keys}\u001b[37m│",
+            "type": "title",
+            "format": "{host-name}",
+			"keyColor": "cyan"
+        },
+        {
+            "key": "\u001b[37m│ {#32}󰅐  uptime  {#keys}\u001b[37m│",
+            "type": "uptime",
+			"keyColor": "green"
+        },
+        {
+            "key": "\u001b[37m│ {#33}{icon}  distro  {#keys}\u001b[37m│",
+            "type": "os",
+			"keyColor": "yellow"
+        },
+        {
+            "key": "\u001b[37m│ {#31}  kernel  {#keys}\u001b[37m│",
+            "type": "kernel",
+			"keyColor": "red"
+        },
+        {
+            "key": "\u001b[37m│ {#35}󰏖  pkgs    {#keys}\u001b[37m│",
+            "type": "packages",
+			"keyColor": "magenta"
+        },
+        {
+            "key": "\u001b[37m│ {#36}  shell   {#keys}\u001b[37m│",
+            "type": "shell",
+			"keyColor": "cyan"
+        },
+        {
+            "key": "\u001b[37m│ {#32}󰍛  cpu     {#keys}\u001b[37m│",
+            "type": "cpu",
+			"keyColor": "green"
+        },
+        {
+            "key": "\u001b[37m│ {#33}󰢮  gpu     {#keys}\u001b[37m│",
+            "type": "gpu",
+            "keyColor": "yellow"
+        },
+        {
+            "key": "\u001b[37m│ {#31}󰨜  driver  {#keys}\u001b[37m│",
+            "type": "gpu",
+            "format": "{3}",
+			"keyColor": "red"
+        },
+        {
+            "key": "\u001b[37m│ {#35}  memory  {#keys}\u001b[37m│",
+            "type": "memory",
+			"keyColor": "magenta"
+        },
+        {
+            "key": "\u001b[37m│ {#36}󰯍  swap    {#keys}\u001b[37m│",
+            "type": "swap",
+			"keyColor": "cyan"
+        },
+		{
+            "key": "\u001b[37m│ {#32}󰉉  root    {#keys}\u001b[37m│",
+            "type": "disk",
+            "folders": "/",
+			"keyColor": "green"
+        },
+        {
+            "key": "\u001b[37m│ {#33}  home    {#keys}\u001b[37m│",
+            "type": "disk",
+            "folders": "/home",
+			"keyColor": "yellow"
+        },
+        {
+            "key": "\u001b[37m│ {#31}󰩟  loc IP  {#keys}\u001b[37m│",
+            "type": "localip",
+			"keyColor": "red"
+        },
+        {
+            "key": "\u001b[37m│ {#35}󱦂  pub IP  {#keys}\u001b[37m│",
+            "type": "publicip",
+            "timeout": 1000,
+			"keyColor": "magenta"
+        },
+        {
+            "key": "\u001b[37m│ {#36}  Wi-Fi   {#keys}\u001b[37m│",
+            "type": "wifi",
+            "format": "{ssid}",
+			"keyColor": "cyan"
+        },
+        {
+            "key": "\u001b[37m├────────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "\u001b[37m│ {#39}  colors  {#keys}\u001b[37m│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "\u001b[37m╰────────────╯",
+            "type": "custom"
+        }
+    ]
+}

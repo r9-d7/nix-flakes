@@ -4,109 +4,198 @@
     "logo": {
         "source": "~/.config/fastfetch/nixlogo2.png",
         "type": "kitty",
-		"height": 16,
+		"height": 18,
         "padding": {
-            "top": 3,
-			"bottom": 2
+            "top": 4,
+			"bottom": 5,
+			"left": 2
         }
     },
     "display": {
-        "separator": " "
+        "separator": "   ",
+		"color": {
+			"separator": "37"
+		},
+        "constants": [
+            "────────────", // {$1}, used in Custom module
+			"           "
+        ],
+        "key": {
+            "paddingLeft": 3
+        }
     },
     "modules": [
+
+		{
+			"type": "custom",
+			"format": "{$2}┌{$1}{$1}┐",
+			"outputColor": "37"
+		},
+		{
+			"type": "title",
+			"format": "{$2}    {user-name-colored}{at-symbol-colored}{host-name-colored}    ",
+			"color": {
+				"user": "cyan",
+				"at": "red",
+				"host": "magenta"
+			}
+		},
         {
-            "key": "\u001b[37m╭────────────╮",
-            "type": "custom"
+			"type": "custom",
+			"format": "{$2}└{$1}{$1}┘",
+			"outputColor": "37"
+		}, 
+		{
+            "type": "custom", 
+            "format": "┌{$1}──────────────────────{$1}┐",
+			"outputColor": "37"
         },
         {
-            "key": "\u001b[37m│ {#35}  user    {#keys}\u001b[37m│",
-            "type": "title",
-            "format": "{user-name}"
+			"type": "custom",
+			"format": "  SYSTEM",
+			"outputColor": "italic_38"
+		},
+        {
+            "key": "{icon} ",
+            "type": "os",
+			"format": "{3}",
+			"keyColor": "cyan",
+			"outputColor": "cyan"
         },
         {
-            "key": "\u001b[37m│ {#36}󰇅  hname   {#keys}\u001b[37m│",
-            "type": "title",
-            "format": "{host-name}"
+            "key": " ",
+            "type": "kernel",
+			"keyColor": "cyan",
+			"outputColor": "cyan"
+		},
+		{
+            "key": "󰏖 ",
+            "type": "packages",
+			"keyColor": "cyan",
+			"outputColor": "cyan"
         },
         {
-            "key": "\u001b[37m│ {#32}󰅐  uptime  {#keys}\u001b[37m│",
-            "type": "uptime"
+            "key": " ",
+            "type": "shell",
+			"keyColor": "cyan",
+			"outputColor": "cyan"
         },
         {
-            "key": "\u001b[37m│ {#33}{icon}  distro  {#keys}\u001b[37m│",
-            "type": "os"
+            "key": "󰩟 ",
+            "type": "localip",
+			"keyColor": "cyan",
+			"outputColor": "cyan"
         },
         {
-            "key": "\u001b[37m│ {#31}  kernel  {#keys}\u001b[37m│",
-            "type": "kernel"
+            "key": "󱦂 ",
+            "type": "publicip",
+            "timeout": 1000,
+			"keyColor": "cyan",
+			"outputColor": "cyan"
         },
         {
-            "key": "\u001b[37m│ {#35}󰏖  pkgs    {#keys}\u001b[37m│",
-            "type": "packages"
+            "key": "󰖩 ",
+            "type": "wifi",
+            "format": "{ssid}",
+			"keyColor": "cyan",
+			"outputColor": "cyan"
         },
         {
-            "key": "\u001b[37m│ {#36}  shell   {#keys}\u001b[37m│",
-            "type": "shell"
-        },
-        {
-            "key": "\u001b[37m│ {#32}󰍛  cpu     {#keys}\u001b[37m│",
-            "type": "cpu",
-            "showPeCoreCount": true
-        },
-        {
-            "key": "\u001b[37m│ {#33}󰢮  gpu     {#keys}\u001b[37m│",
-            "type": "gpu",
-            "showPeCoreCount": true
-        },
-        {
-            "key": "\u001b[37m│ {#31}󰨜  driver  {#keys}\u001b[37m│",
-            "type": "gpu",
-            "format": "{3}"
-        },
-        {
-            "key": "\u001b[37m│ {#35}  memory  {#keys}\u001b[37m│",
-            "type": "memory"
-        },
-        {
-            "key": "\u001b[37m│ {#36}󰯍  swap    {#keys}\u001b[37m│",
-            "type": "swap"
+            "type": "custom",
+            "format": "└{$1}──────────────────────{$1}┘",
+			"outputColor": "37"
         },
 		{
-            "key": "\u001b[37m│ {#32}󰉉  root    {#keys}\u001b[37m│",
+            "type": "custom", 
+            "format": "┌{$1}──────────────────────{$1}┐",
+			"outputColor": "37"
+        },
+        {
+			"type": "custom",
+			"format": "  HARDWARE",
+			"outputColor": "italic_38"
+		},
+		{
+            "key": "󰍛 ",
+            "type": "cpu",
+			"format": "{1}",
+			"keyColor": "magenta",
+			"outputColor": "magenta"
+        },
+        {
+            "key": "󰢮 ",
+            "type": "gpu",
+            "format": "{2}", 
+			"keyColor": "magenta",
+			"outputColor": "magenta"
+        },
+        {
+            "key": " ",
+            "type": "memory", 
+			"keyColor": "magenta",
+			"outputColor": "magenta"
+        },
+        {
+            "key": "󰯍 ",
+            "type": "swap", 
+			"keyColor": "magenta",
+			"outputColor": "magenta"
+        },
+		{
+            "key": "󰉉 ",
             "type": "disk",
-            "folders": "/"
+            "folders": "/", 
+			"keyColor": "magenta",
+			"outputColor": "magenta"
         },
         {
-            "key": "\u001b[37m│ {#33}  home    {#keys}\u001b[37m│",
+            "key": " ",
             "type": "disk",
-            "folders": "/home"
+            "folders": "/home", 
+			"keyColor": "magenta",
+			"outputColor": "magenta"
+        },
+        
+        {
+            "type": "custom",
+            "format": "└{$1}──────────────────────{$1}┘",
+			"outputColor": "37"
+        }, 
+        {
+            "type": "custom", 
+            "format": "┌{$1}──────────────────────{$1}┐",
+			"outputColor": "37"
+        },
+
+        {
+			"type": "custom",
+			"format": "  STATUS",
+			"outputColor": "italic_38"
+		},
+
+        {
+        	"type": "command",
+        	"key": " ",
+        	"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+        	"keyColor": "green",
+			"outputColor": "green"
         },
         {
-            "key": "\u001b[37m│ {#31}󰩟  loc IP  {#keys}\u001b[37m│",
-            "type": "localip"
+            "key": "󰅐 ",
+            "type": "uptime",
+			"keyColor": "green",
+			"outputColor": "green"
         },
-        {
-            "key": "\u001b[37m│ {#35}󱦂  pub IP  {#keys}\u001b[37m│",
-            "type": "publicip",
-            "timeout": 1000
-        },
-        {
-            "key": "\u001b[37m│ {#36}  Wi-Fi   {#keys}\u001b[37m│",
-            "type": "wifi",
-            "format": "{ssid}"
-        },
-        {
-            "key": "\u001b[37m├────────────┤",
-            "type": "custom"
-        },
-        {
-            "key": "\u001b[37m│ {#39}  colors  {#keys}\u001b[37m│",
-            "type": "colors",
-            "symbol": "circle"
-        },
-        {
-            "key": "\u001b[37m╰────────────╯",
-            "type": "custom"
+		{
+			"key": " ",
+			"type": "colors",
+			"keyColor": "green",
+			"symbol": "circle"
+		},
+		{
+            "type": "custom",
+            "format": "└{$1}──────────────────────{$1}┘",
+			"outputColor": "37"
         }
     ]
 }
