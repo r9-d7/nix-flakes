@@ -20,6 +20,8 @@
     inputs.mediaplayer.packages.${pkgs.system}.default
     playerctl
     heroic
+    libgcc
+    gcc
   ];
 
   # Programs
