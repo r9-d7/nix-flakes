@@ -4,11 +4,11 @@
     "logo": {
         "source": "~/.config/fastfetch/nixlogo2.png",
         "type": "kitty",
-		"height": 18,
+		"height": 17,
         "padding": {
-            "top": 4,
-			"bottom": 5,
-			"left": 2
+            "top": 3,
+			//"bottom": 5,
+			"left": 3
         }
     },
     "display": {
@@ -26,35 +26,34 @@
     },
     "modules": [
 
+	    //{
+        //    "type": "custom", 
+        //    "format": "┌{$1}──────────────────────{$1}┐",
+		//	"outputColor": "37"
+        //},
 		{
-			"type": "custom",
-			"format": "{$2}┌{$1}{$1}┐",
-			"outputColor": "37"
-		},
-		{
+			//"key": " ",
 			"type": "title",
-			"format": "{$2}    {user-name-colored}{at-symbol-colored}{host-name-colored}    ",
+			"format": " {user-name-colored}{at-symbol-colored}{host-name-colored}",
 			"color": {
-				"user": "cyan",
-				"at": "red",
-				"host": "magenta"
-			}
+				"user": "italic_cyan",
+				"at": "38",
+				"host": "italic_magenta"
+			}//,
+			//"keyColor": "38"
 		},
-        {
-			"type": "custom",
-			"format": "{$2}└{$1}{$1}┘",
-			"outputColor": "37"
-		}, 
+        "break", 
+		
+		//{
+        //    "type": "custom",
+        //    "format": "└{$1}──────────────────────{$1}┘",
+		//	"outputColor": "37"
+        //},
 		{
-            "type": "custom", 
-            "format": "┌{$1}──────────────────────{$1}┐",
-			"outputColor": "37"
+            "type": "custom",
+            "format": "┌{$1}─────── SYSTEM ───────{$1}┐",
+			"outputColor": "italic_37"
         },
-        {
-			"type": "custom",
-			"format": "  SYSTEM",
-			"outputColor": "italic_38"
-		},
         {
             "key": "{icon} ",
             "type": "os",
@@ -80,19 +79,19 @@
 			"keyColor": "cyan",
 			"outputColor": "cyan"
         },
-        {
-            "key": "󰩟 ",
-            "type": "localip",
-			"keyColor": "cyan",
-			"outputColor": "cyan"
-        },
-        {
-            "key": "󱦂 ",
-            "type": "publicip",
-            "timeout": 1000,
-			"keyColor": "cyan",
-			"outputColor": "cyan"
-        },
+        //{
+        //    "key": "󰩟 ",
+        //    "type": "localip",
+		//	"keyColor": "cyan",
+		//	"outputColor": "cyan"
+        //},
+        //{
+        //    "key": "󱦂 ",
+        //    "type": "publicip",
+        //    "timeout": 1000,
+		//	"keyColor": "cyan",
+		//	"outputColor": "cyan"
+        //},
         {
             "key": "󰖩 ",
             "type": "wifi",
@@ -101,20 +100,30 @@
 			"outputColor": "cyan"
         },
         {
+        	"type": "command",
+        	"key": " ",
+        	"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+        	"keyColor": "cyan",
+			"outputColor": "cyan"
+        },
+        {
+            "key": "󰔛 ",
+            "type": "uptime",
+			"keyColor": "cyan",
+			"outputColor": "cyan"
+        },
+
+        {
             "type": "custom",
             "format": "└{$1}──────────────────────{$1}┘",
 			"outputColor": "37"
         },
+		"break",
 		{
             "type": "custom", 
-            "format": "┌{$1}──────────────────────{$1}┐",
-			"outputColor": "37"
+            "format": "┌{$1}────── HARDWARE ──────{$1}┐",
+			"outputColor": "italic_37"
         },
-        {
-			"type": "custom",
-			"format": "  HARDWARE",
-			"outputColor": "italic_38"
-		},
 		{
             "key": "󰍛 ",
             "type": "cpu",
@@ -155,47 +164,17 @@
 			"keyColor": "magenta",
 			"outputColor": "magenta"
         },
-        
         {
             "type": "custom",
             "format": "└{$1}──────────────────────{$1}┘",
 			"outputColor": "37"
-        }, 
-        {
-            "type": "custom", 
-            "format": "┌{$1}──────────────────────{$1}┐",
-			"outputColor": "37"
         },
-
-        {
-			"type": "custom",
-			"format": "  STATUS",
-			"outputColor": "italic_38"
-		},
-
-        {
-        	"type": "command",
-        	"key": " ",
-        	"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-        	"keyColor": "green",
-			"outputColor": "green"
-        },
-        {
-            "key": "󰅐 ",
-            "type": "uptime",
-			"keyColor": "green",
-			"outputColor": "green"
-        },
-		{
-			"key": " ",
+		"break",
+	    {
+			//"key": " ",
 			"type": "colors",
-			"keyColor": "green",
+			"paddingLeft": 2,
 			"symbol": "circle"
-		},
-		{
-            "type": "custom",
-            "format": "└{$1}──────────────────────{$1}┘",
-			"outputColor": "37"
-        }
+		}
     ]
 }
