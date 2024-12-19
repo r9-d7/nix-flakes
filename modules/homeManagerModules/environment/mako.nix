@@ -11,7 +11,7 @@
     anchor = "top-center";
     borderRadius = 8;
     defaultTimeout = 10000;
-    font = "Cascadia Code 12";
+    font = "CaskaydiaCove Nerd Font";
     catppuccin.enable = true;
     catppuccin.flavor = "mocha";
     catppuccin.accent = "mauve";

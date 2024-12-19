@@ -83,12 +83,12 @@ window#waybar.hidden {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: @flamingo;
+	color: @colorL7;
 }
 
 #workspaces button.active:hover {
-    color: @flamingo;
-	border :2px solid @mauve;
+    color: @colorL7;
+	border :2px solid @colorL7;
 }
 
 #pulseaudio {

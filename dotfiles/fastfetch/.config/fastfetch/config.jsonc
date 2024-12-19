@@ -4,7 +4,7 @@
     "logo": {
         "source": "~/.config/fastfetch/nixlogo2.png",
         "type": "kitty",
-		"height": 17,
+		"height": 18,
         "padding": {
             "top": 3,
 			//"bottom": 5,
@@ -17,7 +17,7 @@
 			"separator": "37"
 		},
         "constants": [
-            "────────────", // {$1}, used in Custom module
+            "──────────────", // {$1}, used in Custom module
 			"           "
         ],
         "key": {
@@ -31,14 +31,15 @@
         //    "format": "┌{$1}──────────────────────{$1}┐",
 		//	"outputColor": "37"
         //},
+		"break",
 		{
 			//"key": " ",
 			"type": "title",
-			"format": " {user-name-colored}{at-symbol-colored}{host-name-colored}",
+			"format": "{$2}[    {user-name-colored}{at-symbol-colored}{host-name-colored}    {#37}]",
 			"color": {
-				"user": "italic_cyan",
-				"at": "38",
-				"host": "italic_magenta"
+				"user": "blink_italic_cyan",
+				"at": "blink_38",
+				"host": "blink_italic_magenta"
 			}//,
 			//"keyColor": "38"
 		},
@@ -51,7 +52,7 @@
         //},
 		{
             "type": "custom",
-            "format": "┌{$1}─────── SYSTEM ───────{$1}┐",
+            "format": "┌{$1}────── SYSTEM ──────{$1}┐",
 			"outputColor": "italic_37"
         },
         {
@@ -79,19 +80,6 @@
 			"keyColor": "cyan",
 			"outputColor": "cyan"
         },
-        //{
-        //    "key": "󰩟 ",
-        //    "type": "localip",
-		//	"keyColor": "cyan",
-		//	"outputColor": "cyan"
-        //},
-        //{
-        //    "key": "󱦂 ",
-        //    "type": "publicip",
-        //    "timeout": 1000,
-		//	"keyColor": "cyan",
-		//	"outputColor": "cyan"
-        //},
         {
             "key": "󰖩 ",
             "type": "wifi",
@@ -115,13 +103,13 @@
 
         {
             "type": "custom",
-            "format": "└{$1}──────────────────────{$1}┘",
+            "format": "└{$1}────────────────────{$1}┘",
 			"outputColor": "37"
         },
 		"break",
 		{
             "type": "custom", 
-            "format": "┌{$1}────── HARDWARE ──────{$1}┐",
+            "format": "┌{$1}───── HARDWARE ─────{$1}┐",
 			"outputColor": "italic_37"
         },
 		{
@@ -166,15 +154,17 @@
         },
         {
             "type": "custom",
-            "format": "└{$1}──────────────────────{$1}┘",
+            "format": "└{$1}────────────────────{$1}┘",
 			"outputColor": "37"
         },
 		"break",
-	    {
-			//"key": " ",
-			"type": "colors",
-			"paddingLeft": 2,
-			"symbol": "circle"
-		}
+		{
+            "type": "custom",
+            "format": "{$2}[ {#38} ● {#37} ● {#36} ● {#35} ● {#34} ● {#33} ● {#32} ● {#31} ● {#37} ]"
+        },
+		"break"
     ]
-}
+}        
+
+
+//└────────────────────────────────────────────────┘
