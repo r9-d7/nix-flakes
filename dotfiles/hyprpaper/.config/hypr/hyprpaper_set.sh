@@ -1,10 +1,11 @@
 set_wallpaper() {
-	monitor=""
+	monitor=" "
 	wallpaper_dir="$HOME/.config/hypr/wallpapers"
+	echo "$wallpaper_dir"
 	files=($wallpaper_dir/*)
+	echo "$files"
 	random_file=("${files[RANDOM % ${#files[@]}]}")
+	echo "$random_file"
 	hyprctl hyprpaper wallpaper "$monitor,$random_file"
-
-	echo -en "wallpaper =$monitor,$random_file" > ~/.config/hypr/sethyprpaper.conf
 }
 set_wallpaper

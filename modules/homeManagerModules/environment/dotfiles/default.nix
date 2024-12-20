@@ -19,7 +19,7 @@
   xdg.configFile."hypr/wallpapers/galaxy.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/galaxy.jpeg;
 
   # hyprpaper
-  xdg.configFile."hypr/hyprpaper.conf".source = ./../../../../dotfiles/hyprpaper/.config/hypr/hyprpaper.conf;
+  #xdg.configFile."hypr/hyprpaper.conf".source = ./../../../../dotfiles/hyprpaper/.config/hypr/hyprpaper.conf;
   xdg.configFile."hypr/hyprpaper_preload.sh".source = ./../../../../dotfiles/hyprpaper/.config/hypr/hyprpaper_preload.sh;
   xdg.configFile."hypr/hyprpaper_set.sh".source = ./../../../../dotfiles/hyprpaper/.config/hypr/hyprpaper_set.sh;
   xdg.configFile."hypr/wallpapers/cloudynight.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/cloudynight.png;
