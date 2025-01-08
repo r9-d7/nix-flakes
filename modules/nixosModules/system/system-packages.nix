@@ -51,6 +51,8 @@
     };
   };
 
+  virtualisation.virtualbox.host.enable = true;
+
   # Font Packages
   fonts.packages = with pkgs; [
     nerd-fonts.caskaydia-cove

@@ -25,6 +25,10 @@
   xdg.configFile."hypr/wallpapers/foggybridge.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/foggybridge.png;
   xdg.configFile."hypr/wallpapers/retrospace.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/retrospace.png;
   xdg.configFile."hypr/wallpapers/cloudynight.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/cloudynight.png;
+  xdg.configFile."hypr/wallpapers/pinkMountain.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/pinkMountain.jpeg;
+  xdg.configFile."hypr/wallpapers/pinkcloud.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/pinkcloud.jpeg;
+  xdg.configFile."hypr/wallpapers/nebula.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/nebula.jpeg;
+  xdg.configFile."hypr/wallpapers/wavygrid.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/wavygrid.jpeg;
   
   #kitty
   xdg.configFile."kitty/kitty.conf".source = ./../../../../dotfiles/kitty/.config/kitty/kitty.conf;
