@@ -22,6 +22,9 @@
     heroic
     libgcc
     gcc
+    wlr-randr
+    xorg.xrandr
+    ntfs3g
   ];
 
   # Programs

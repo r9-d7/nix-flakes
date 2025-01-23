@@ -31,10 +31,12 @@
   };
   
   # Graphics settings  
-  services.xserver.enable = true;
-  
-  # Enable Gnome
-  services.xserver.desktopManager.xfce.enable = true; 
+  services.xserver = {
+    enable = true;
+    desktopManager = {
+      gnome.enable = true;
+    };
+  };
 
   # Bluetooth Settings
   hardware.bluetooth.enable = true;
