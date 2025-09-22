@@ -1,14 +1,15 @@
 { config, lib, pkgs, inputs, ... }:
 {
-  home.username = "rossf";
-  home.homeDirectory = "/home/rossf";
-  home.stateVersion = "24.11";
+  home.username = "rdfagerli";
+  home.homeDirectory = "/home/rdfagerli";
+  home.stateVersion = "25.05";
   home.packages = with pkgs; [
     fastfetch
     cmatrix
     git
     starship
     cava
+    papirus-icon-theme
   ];
 
   imports = [
@@ -29,7 +30,7 @@
     anchor = "top-center";
     borderRadius = 8;
     defaultTimeout = 10000;
-    font = "Cascadia Code 12";
+    font = "Caskaydia Cove";
     catppuccin.enable = true;
     catppuccin.flavor = "mocha";
     catppuccin.accent = "mauve";
@@ -40,7 +41,12 @@
     width = 300;
     layer = "overlay";
   };
-
+  
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "mauve";
+  };
 
   # Neovim Configuration
   programs.neovim = 

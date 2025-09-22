@@ -34,7 +34,7 @@
             useUserPackages = true;
 
             extraSpecialArgs = { inherit inputs; };
-            users.rossf = {
+            users.rdfagerli = {
               imports = [
                 ./hosts/laptop/home.nix
                 catppuccin.homeManagerModules.catppuccin

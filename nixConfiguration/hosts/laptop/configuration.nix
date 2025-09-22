@@ -6,7 +6,7 @@
 
 
 {
-  system.stateVersion = "24.11"; 
+  system.stateVersion = "25.05"; 
   imports =
     [
       ../../hardware-configuration.nix
@@ -18,7 +18,7 @@
 
   # user account
   main-user.enable = true;
-  main-user.userName = "rossf";
+  main-user.userName = "rdfagerli";
   
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -29,6 +29,11 @@
   
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nixpkgs.config.allowInsecurePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "broadcom-sta"
+    ];
 
   # Set your time zone.
   time.timeZone = "America/New_York";
