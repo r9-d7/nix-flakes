@@ -21,10 +21,14 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    #6
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, catppuccin, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, stylix, catppuccin, home-manager, ... }@inputs: 
   let
       system = "x86_64-linux";
       pgks = import nixpkgs.legacyPackages.${system};
@@ -35,6 +39,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/nixVault-LAPTOP/configuration.nix
+        stylix.nixosModules.stylix
         catppuccin.nixosModules.catppuccin          
         home-manager.nixosModules.home-manager
         {
@@ -42,11 +47,12 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             extraSpecialArgs = { inherit inputs; };
-            users.rossf = {
+            users.rdfagerli = {
               imports = [
                 ./hosts/nixVault-LAPTOP/home.nix
-                  catppuccin.homeManagerModules.catppuccin
-                  inputs.spicetify-nix.homeManagerModules.default
+                #stylix.homeModules.stylix
+                catppuccin.homeModules.catppuccin
+                inputs.spicetify-nix.homeManagerModules.default
               ];
             };
           };

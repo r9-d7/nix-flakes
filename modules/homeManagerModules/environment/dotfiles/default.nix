@@ -35,7 +35,7 @@
   xdg.configFile."hypr/wallpapers/retrohighway.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/retrohighway.png;
   xdg.configFile."hypr/wallpapers/raincar.png".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/raincar.png;
   xdg.configFile."hypr/wallpapers/galaxy.jpeg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/galaxy.jpeg;
-
+  xdg.configFile."hypr/wallpapers/blobs-l.svg".source = ./../../../../dotfiles/hyprpaper/.config/hypr/wallpapers/blobs-l.svg;
 
   #kitty
   xdg.configFile."kitty/kitty.conf".source = ./../../../../dotfiles/kitty/.config/kitty/kitty.conf;

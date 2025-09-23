@@ -1,15 +1,15 @@
 { config, lib, pkgs, inputs, ... }:
 {
   
-  home.username = "rossf";
-  home.homeDirectory = "/home/rossf";
-  home.stateVersion = "24.11";
+  home.username = "rdfagerli";
+  home.homeDirectory = "/home/rdfagerli";
+  home.stateVersion = "25.05";
 
   imports = [
     ./../../modules/homeManagerModules
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  #nixpkgs.config.allowUnfree = true;
   programs.home-manager.enable = true;
   hypr-laptop.enable = true;
 

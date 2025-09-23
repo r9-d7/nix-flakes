@@ -13,7 +13,7 @@
       lt = "eza -a --tree --level=3 --icons=always";
       vim = "nvim";
       vi = "nvim";
-      nixbuild = "sudo nixos-rebuild switch --flake '/home/rossf/nix-flakes'";
+      nixbuild = "sudo nixos-rebuild switch --flake '/home/rdfagerli/nix-flakes' .#nixvault-102";
       neofetch = "fastfetch";
       nf = "fastfetch";
       ff = "fastfetch";

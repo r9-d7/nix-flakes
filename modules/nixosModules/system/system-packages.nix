@@ -25,6 +25,8 @@
     wlr-randr
     xorg.xrandr
     ntfs3g
+    wayland-utils
+    wl-clipboard
   ];
 
   # Programs

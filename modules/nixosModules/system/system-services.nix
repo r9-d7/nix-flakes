@@ -38,6 +38,18 @@
     };
   };
 
+  environment.gnome.excludePackages = with pkgs; [
+    epiphany
+    simple-scan
+    totem
+    yelp
+    evince
+    geary
+    gnome-contacts
+    gnome-maps
+    gnome-weather
+  ];
+
   # Bluetooth Settings
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
