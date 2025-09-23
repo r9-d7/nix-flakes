@@ -9,7 +9,7 @@ in
   programs.spicetify =
   {
     enable = true;
-    theme = spicePkgs.themes.dracula;
+    #theme = spicePkgs.themes.dracula;
       #colorScheme = "mocha";
     enabledExtensions = with spicePkgs.extensions; [
       fullAppDisplay

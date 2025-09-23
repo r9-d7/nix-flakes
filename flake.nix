@@ -28,7 +28,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, stylix, catppuccin, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, catppuccin, home-manager, ... }@inputs: 
   let
       system = "x86_64-linux";
       pgks = import nixpkgs.legacyPackages.${system};
@@ -39,7 +39,7 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./hosts/nixVault-LAPTOP/configuration.nix
-        stylix.nixosModules.stylix
+        inputs.stylix.nixosModules.stylix
         catppuccin.nixosModules.catppuccin          
         home-manager.nixosModules.home-manager
         {
