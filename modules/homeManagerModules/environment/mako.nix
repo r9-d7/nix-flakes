@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   # Mako Configuration
-  services.mako = 
+  services.mako.settings = 
   let
       package = pkgs.papirus-icon-theme;
       pathToIcons = "${package}/share/icons/Papirus-Dark";
@@ -12,14 +12,19 @@
     borderRadius = 8;
     defaultTimeout = 10000;
     font = "CaskaydiaCove Nerd Font";
-    catppuccin.enable = true;
-    catppuccin.flavor = "mocha";
-    catppuccin.accent = "mauve";
+    #catppuccin.enable = true;
+    #catppuccin.flavor = "mocha";
+    #catppuccin.accent = "mauve";
     iconPath = "${pathToIcons}";
     maxVisible = 3;
     borderSize = 2;
     actions = true;
     width = 300;
     layer = "overlay";
+  };
+  catppuccin.mako = {
+    accent = "mauve";
+    flavor = "mocha";
+    enable = true;
   };
 }
